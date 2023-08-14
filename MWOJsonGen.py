@@ -8,6 +8,9 @@ from collections import defaultdict
 #from lxml import lET
 import re
 
+gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
+Weapons = {}
+
 class CommentedTreeBuilder(ET.TreeBuilder):
     def comment(self, data):
         self.start(ET.Comment, {})
@@ -47,16 +50,29 @@ def read_and_convert_weapons(weapon_path):
 
 	weapons = {} #defaultdict(dict)
 	for wElement in root.iter("Weapon"):
+		inheritId = wElement.get("InheritFrom")
+		#t_ =  wElement.find("WeaponStats").get("type") if inheritId == None else 
+			
 		weapons[wElement.get("name")] = {
 			"id": wElement.get("id"),
 			"HardpointAliases": wElement.get("HardpointAliases").split(","),
-			"type": wElement.find("WeaponStats").get("type")
+			"type": wElement.find("WeaponStats").get("type") if inheritId is None else "",
+			"inheritId": inheritId
 		}
+	
+	#propagate inherited stats
+	for w in weapons.values():
+		if w["inheritId"] is not None:
+			for parent_w in weapons.values():
+				if parent_w["id"] == w["inheritId"]:
+					w["type"] = parent_w["type"]
+
 	
 	print("writing json:\n")
 	with open('Weapons.json', 'w') as f:
 		json.dump(weapons, f, indent=4, separators=(", ", " = "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
+	Weapons = weapons
 
 
 def read_and_convert_mechpaks(mech_dir):
@@ -69,6 +85,12 @@ def read_and_convert_mechpaks(mech_dir):
 
 	mechs = defaultdict(dict)
 	
+	HardpointTypeAliases = defaultdict(dict)
+	for w in Weapons.values():
+		if w["type"] in HardpointTypeAliases:
+			HardpointTypeAliases[w["type"]].update(w["HardpointAliases"]) 
+		else:
+			HardpointTypeAliases[w["type"]] = w["HardpointAliases"]
 
 	for file in os.listdir(mech_dir):
 		if file.endswith(".pak"):
@@ -78,7 +100,7 @@ def read_and_convert_mechpaks(mech_dir):
 			if mech_name[0] == 'a':
 				print("Found a zipped file:", mech_name)
 				data["mechs"][mech_name] = { "Variants": {}}
-				with zipfile.ZipFile(os.path.join(source_dir, file), "r") as zip_ref:
+				with zipfile.ZipFile(os.path.join(mech_dir, file), "r") as zip_ref:
 					for member in zip_ref.namelist():
 						if member.endswith(".mdf"):
 							mechvariant = os.path.basename(member)
@@ -171,30 +193,28 @@ def read_and_convert_mechpaks(mech_dir):
 							root = tree.getroot()
 
 
-							def get_weapon_type(names):
-								energyAliases = ["Missile20"]
-								if any(n in names for e in energyAliases):
-									return "Energy"
+							def get_weapon_type(testingNames):
+								for t in HardpointTypeAliases:
+									if any(n in testingNames for n in HardpointTypeAliases[t]):
+										return t
+								print("error: hardpoint not found\n", testingNames, "\n-\n", HardpointTypeAliases)
+								return ""
+
+
+								# energyAliases = ["Missile20"]
+								# if any(n in names for n in energyAliases):
+								# 	return "Energy"
+
 							hardpointIndex = {}
 							for hardpoint in root.iter("Hardpoint"):
 								for w in hardpoint.iter("WeaponSlot"):
-									get_weapon_type(attachment.get("search") for attachment in w)
+									t = get_weapon_type(attachment.get("search") for attachment in w)
+									if t in hardpointIndex:
+										hardpointIndex[t] += 1
+									else:
+										hardpointIndex[t] = 1
+							#data["mechs"][mech_name]
 
-							# matches = re.findall(
-							# 	r"<Hardpoint id=\"(\d+)\">[\s\n\t]*<!--(left arm|right arm|left leg|right leg|left torso|right torso|centre torso|head), (\d+)? ?(Ballistic|Missile|Energy|AMS)-->",
-							# 	openedFile.read().decode('utf-8'),
-							# 	re.IGNORECASE
-							# 	)
-							
-							# print(matches)
-							# hardpointIndex = {}
-							# for m in matches:
-							# 	hardpointIndex[int(m[0])] = {
-							# 		"part": m[1],
-							# 		"amount": 1 if m[2]=="" else int(m[2]),
-							# 		"type": m[3]}
-							
-							#data["mechs"][mech_name]["Hardpoints"] = hardpoints
 
 							for variant in data["mechs"][mech_name]["Variants"].values():
 								for component in variant["ComponentList"].values():
@@ -232,6 +252,7 @@ def read_and_convert_mechpaks(mech_dir):
 		#destination_dir = os.path.join(source_dir, mech_name)
 
 if __name__ == "__main__":
-	source_dir = os.getcwd()
+	#source_dir = os.getcwd()
   	#copy_mdf_and_xml_files(source_dir)
-	read_and_convert_mechpaks(source_dir)
+	read_and_convert_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Weapons\Weapons.xml"))
+	read_and_convert_mechpaks(os.path.join(gamePath, "Game\mechs"))
