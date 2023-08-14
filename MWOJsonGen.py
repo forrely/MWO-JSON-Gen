@@ -105,15 +105,16 @@ def read_and_convert_mechpaks(mech_dir):
 		if file.endswith(".pak"):
 			mech_name = os.path.basename(file[:-4])
 			
-
-			if mech_name[0] == 'a':
+			fullrun = True or mech_name[0] == 'a'
+			if fullrun:
 				print("Found a zipped file:", mech_name)
 				data["mechs"][mech_name] = { "Variants": {}}
 				with zipfile.ZipFile(os.path.join(mech_dir, file), "r") as zip_ref:
 					for member in zip_ref.namelist():
 						if member.endswith(".mdf"):
-							mechvariant = os.path.basename(member)
+							mechvariant = os.path.basename(member).split(".")[0].upper()
 							openedFile = zip_ref.open(member)
+
 
 							variant = {	}
 							tree = ET.parse(openedFile)
@@ -143,7 +144,8 @@ def read_and_convert_mechpaks(mech_dir):
 							variant["QuirkList"] = quirks
 							if baseStats["Variant"] == "ADR-A":
 								print(variant)
-							data["mechs"][mech_name]["Variants"][baseStats["Variant"].upper()] = variant
+							#data["mechs"][mech_name]["Variants"][baseStats["Variant"].upper()] = variant
+							data["mechs"][mech_name]["Variants"][mechvariant] = variant #<- have to use file name cause pgi made spelling errors in xml
 		
 					for member in zip_ref.namelist():
 						if os.path.basename(member).find("omnipods") >= 0:
