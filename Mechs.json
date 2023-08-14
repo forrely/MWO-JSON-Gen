@@ -825,7 +825,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -840,7 +842,10 @@
                                 13, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -850,7 +855,9 @@
                             "HardpointIds" = [
                                 23
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -861,7 +868,10 @@
                                 53, 
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -872,7 +882,10 @@
                                 40, 
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -907,7 +920,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -922,7 +937,10 @@
                                 13, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -932,7 +950,9 @@
                             "HardpointIds" = [
                                 23
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -943,7 +963,10 @@
                                 53, 
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -954,7 +977,10 @@
                                 40, 
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -992,7 +1018,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1002,13 +1030,17 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1026,7 +1058,9 @@
                             "HardpointIds" = [
                                 52
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1036,7 +1070,9 @@
                             "HardpointIds" = [
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1075,7 +1111,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1089,7 +1127,9 @@
                             "HardpointIds" = [
                                 14
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1099,7 +1139,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1109,7 +1151,9 @@
                             "HardpointIds" = [
                                 54
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1120,7 +1164,10 @@
                                 40, 
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1155,7 +1202,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1165,14 +1214,19 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 13, 
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1182,7 +1236,9 @@
                             "HardpointIds" = [
                                 22
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1193,7 +1249,10 @@
                                 53, 
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1204,7 +1263,10 @@
                                 40, 
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1239,7 +1301,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1249,14 +1313,19 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 13, 
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1266,7 +1335,9 @@
                             "HardpointIds" = [
                                 22
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1277,7 +1348,10 @@
                                 53, 
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1288,7 +1362,10 @@
                                 40, 
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1324,7 +1401,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1339,7 +1418,10 @@
                                 13, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1349,7 +1431,9 @@
                             "HardpointIds" = [
                                 23
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1360,7 +1444,10 @@
                                 53, 
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1371,7 +1458,10 @@
                                 40, 
                                 44
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1405,7 +1495,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1420,7 +1512,10 @@
                                 13, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1430,7 +1525,9 @@
                             "HardpointIds" = [
                                 23
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1441,7 +1538,10 @@
                                 53, 
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1452,7 +1552,10 @@
                                 40, 
                                 44
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1488,7 +1591,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1498,13 +1603,17 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1514,7 +1623,9 @@
                             "HardpointIds" = [
                                 25
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1524,7 +1635,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1535,7 +1648,10 @@
                                 40, 
                                 46
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1571,7 +1687,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1581,13 +1699,17 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1597,7 +1719,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1607,7 +1731,9 @@
                             "HardpointIds" = [
                                 52
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1617,7 +1743,9 @@
                             "HardpointIds" = [
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1654,7 +1782,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1668,7 +1798,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1678,7 +1810,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1688,7 +1822,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1699,7 +1835,10 @@
                                 11, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1737,7 +1876,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1751,7 +1892,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1761,7 +1904,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1771,7 +1916,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1782,7 +1929,10 @@
                                 11, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1823,7 +1973,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1837,7 +1989,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1847,7 +2001,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1857,7 +2013,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1868,7 +2026,10 @@
                                 11, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1908,7 +2069,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1923,7 +2086,10 @@
                                 40, 
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -1933,7 +2099,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1944,7 +2112,10 @@
                                 30, 
                                 32
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -1955,7 +2126,10 @@
                                 11, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -1993,7 +2167,9 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2007,7 +2183,9 @@
                             "HardpointIds" = [
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -2017,7 +2195,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2027,7 +2207,9 @@
                             "HardpointIds" = [
                                 33
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -2038,7 +2220,10 @@
                                 12, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2077,7 +2262,9 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2091,7 +2278,9 @@
                             "HardpointIds" = [
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -2101,7 +2290,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2111,7 +2302,9 @@
                             "HardpointIds" = [
                                 33
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -2122,7 +2315,10 @@
                                 12, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2163,7 +2359,10 @@
                                 0, 
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2177,7 +2376,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -2187,7 +2388,9 @@
                             "HardpointIds" = [
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -2197,7 +2400,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -2208,7 +2413,10 @@
                                 11, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3120,7 +3328,9 @@
                             "HardpointIds" = [
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3134,7 +3344,9 @@
                             "HardpointIds" = [
                                 3
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -3145,7 +3357,10 @@
                                 14, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3155,7 +3370,9 @@
                             "HardpointIds" = [
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -3165,7 +3382,9 @@
                             "HardpointIds" = [
                                 33
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3198,7 +3417,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3212,7 +3433,9 @@
                             "HardpointIds" = [
                                 2
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -3223,7 +3446,10 @@
                                 12, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3233,7 +3459,9 @@
                             "HardpointIds" = [
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -3243,7 +3471,9 @@
                             "HardpointIds" = [
                                 33
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3439,7 +3669,9 @@
                             "HardpointIds" = [
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3453,7 +3685,9 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -3464,7 +3698,10 @@
                                 15, 
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Ballistic" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3474,7 +3711,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -3484,7 +3723,9 @@
                             "HardpointIds" = [
                                 34
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3798,7 +4039,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3808,7 +4051,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -3823,7 +4068,10 @@
                                 22, 
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3833,7 +4081,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -3844,7 +4094,10 @@
                                 41, 
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3880,7 +4133,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3890,7 +4145,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -3905,7 +4162,10 @@
                                 22, 
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3915,7 +4175,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -3926,7 +4188,10 @@
                                 41, 
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3965,7 +4230,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3987,7 +4254,9 @@
                             "HardpointIds" = [
                                 23
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -3997,7 +4266,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4007,7 +4278,9 @@
                             "HardpointIds" = [
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4039,7 +4312,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4061,7 +4336,9 @@
                             "HardpointIds" = [
                                 23
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4071,7 +4348,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4081,7 +4360,9 @@
                             "HardpointIds" = [
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4115,7 +4396,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4145,7 +4428,9 @@
                             "HardpointIds" = [
                                 52
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4155,7 +4440,9 @@
                             "HardpointIds" = [
                                 43
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4189,7 +4476,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4211,7 +4500,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4221,7 +4512,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4231,7 +4524,9 @@
                             "HardpointIds" = [
                                 44
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4270,7 +4565,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4280,7 +4577,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -4294,7 +4593,9 @@
                             "HardpointIds" = [
                                 22
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4304,7 +4605,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4314,7 +4617,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4351,7 +4656,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4361,7 +4668,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -4375,7 +4684,9 @@
                             "HardpointIds" = [
                                 22
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4385,7 +4696,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4395,7 +4708,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4433,7 +4748,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4443,7 +4760,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -4457,7 +4776,9 @@
                             "HardpointIds" = [
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4467,7 +4788,9 @@
                             "HardpointIds" = [
                                 53
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4477,7 +4800,9 @@
                             "HardpointIds" = [
                                 42
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4541,7 +4866,10 @@
                                 53, 
                                 55
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -4551,7 +4879,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4561,7 +4891,9 @@
                             "HardpointIds" = [
                                 52
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4571,7 +4903,9 @@
                             "HardpointIds" = [
                                 51
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4610,7 +4944,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4625,7 +4961,10 @@
                                 14, 
                                 15
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -4635,7 +4974,9 @@
                             "HardpointIds" = [
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4645,7 +4986,9 @@
                             "HardpointIds" = [
                                 13
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4655,7 +4998,9 @@
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4693,7 +5038,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4708,7 +5055,10 @@
                                 14, 
                                 15
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -4718,7 +5068,9 @@
                             "HardpointIds" = [
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4728,7 +5080,9 @@
                             "HardpointIds" = [
                                 13
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4738,7 +5092,9 @@
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4791,7 +5147,10 @@
                                 3, 
                                 5
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -4801,7 +5160,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4811,7 +5172,9 @@
                             "HardpointIds" = [
                                 2
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4821,7 +5184,9 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4871,7 +5236,10 @@
                                 3, 
                                 5
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -4881,7 +5249,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4891,7 +5261,9 @@
                             "HardpointIds" = [
                                 2
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4901,7 +5273,9 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4939,7 +5313,10 @@
                                 3, 
                                 5
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -4949,7 +5326,9 @@
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -4959,7 +5338,9 @@
                             "HardpointIds" = [
                                 2
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -4969,7 +5350,9 @@
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5007,7 +5390,9 @@
                             "HardpointIds" = [
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5022,7 +5407,10 @@
                                 24, 
                                 25
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5032,7 +5420,9 @@
                             "HardpointIds" = [
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5043,7 +5433,10 @@
                                 23, 
                                 26
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5053,7 +5446,9 @@
                             "HardpointIds" = [
                                 22
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5105,7 +5500,10 @@
                                 33, 
                                 15
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5115,7 +5513,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5125,7 +5525,9 @@
                             "HardpointIds" = [
                                 32
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5135,7 +5537,9 @@
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5186,7 +5590,10 @@
                                 33, 
                                 15
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5196,7 +5603,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5206,7 +5615,9 @@
                             "HardpointIds" = [
                                 32
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5216,7 +5627,9 @@
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5255,7 +5668,9 @@
                             "HardpointIds" = [
                                 20
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5270,7 +5685,10 @@
                                 24, 
                                 25
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5280,7 +5698,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5290,7 +5710,9 @@
                             "HardpointIds" = [
                                 32
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5300,7 +5722,9 @@
                             "HardpointIds" = [
                                 22
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5350,7 +5774,10 @@
                                 33, 
                                 35
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5360,7 +5787,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5370,7 +5799,9 @@
                             "HardpointIds" = [
                                 32
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5380,7 +5811,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5432,7 +5865,10 @@
                                 33, 
                                 35
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5442,7 +5878,9 @@
                             "HardpointIds" = [
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5452,7 +5890,9 @@
                             "HardpointIds" = [
                                 32
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5462,7 +5902,9 @@
                             "HardpointIds" = [
                                 31
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5504,7 +5946,9 @@
                             "HardpointIds" = [
                                 60
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5519,7 +5963,10 @@
                                 64, 
                                 65
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5529,7 +5976,9 @@
                             "HardpointIds" = [
                                 61
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5539,7 +5988,9 @@
                             "HardpointIds" = [
                                 63
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5549,7 +6000,9 @@
                             "HardpointIds" = [
                                 62
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5587,7 +6040,9 @@
                             "HardpointIds" = [
                                 60
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5602,7 +6057,10 @@
                                 64, 
                                 65
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5612,7 +6070,9 @@
                             "HardpointIds" = [
                                 61
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5622,7 +6082,9 @@
                             "HardpointIds" = [
                                 63
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5632,7 +6094,9 @@
                             "HardpointIds" = [
                                 62
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Ballistic" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5680,7 +6144,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -5694,7 +6160,9 @@
                             "HardpointIds" = [
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5704,7 +6172,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5715,7 +6185,10 @@
                                 32, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5756,7 +6229,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -5770,7 +6245,9 @@
                             "HardpointIds" = [
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5780,7 +6257,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5791,7 +6270,10 @@
                                 32, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5833,7 +6315,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -5847,7 +6331,9 @@
                             "HardpointIds" = [
                                 13
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5857,7 +6343,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5868,7 +6356,10 @@
                                 34, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5910,13 +6401,17 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 0
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -5926,7 +6421,9 @@
                             "HardpointIds" = [
                                 12
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5936,7 +6433,9 @@
                             "HardpointIds" = [
                                 41
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -5947,7 +6446,10 @@
                                 33, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -5994,7 +6496,9 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [], 
@@ -6008,7 +6512,9 @@
                             "HardpointIds" = [
                                 11
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6018,7 +6524,9 @@
                             "HardpointIds" = [
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -6029,7 +6537,10 @@
                                 35, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6068,7 +6579,10 @@
                                 20, 
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6078,13 +6592,17 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -6094,7 +6612,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6104,7 +6624,9 @@
                             "HardpointIds" = [
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -6115,7 +6637,10 @@
                                 31, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6155,7 +6680,10 @@
                                 20, 
                                 21
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "centre_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6165,13 +6693,17 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 1
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -6181,7 +6713,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6191,7 +6725,9 @@
                             "HardpointIds" = [
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -6202,7 +6738,10 @@
                                 31, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Energy" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6252,13 +6791,17 @@
                             "HardpointIds" = [
                                 50
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_arm" = {
                             "HardpointIds" = [
                                 2
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Missile" = 1
+                            }
                         }, 
                         "left_leg" = {
                             "HardpointIds" = [], 
@@ -6268,7 +6811,9 @@
                             "HardpointIds" = [
                                 10
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "left_torso_rear" = {
                             "HardpointIds" = [], 
@@ -6278,7 +6823,9 @@
                             "HardpointIds" = [
                                 40
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "Energy" = 1
+                            }
                         }, 
                         "right_leg" = {
                             "HardpointIds" = [], 
@@ -6289,7 +6836,10 @@
                                 33, 
                                 30
                             ], 
-                            "Hardpoints" = {}
+                            "Hardpoints" = {
+                                "AMS" = 1, 
+                                "Missile" = 1
+                            }
                         }, 
                         "right_torso_rear" = {
                             "HardpointIds" = [], 

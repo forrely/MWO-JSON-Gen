@@ -1,3 +1,4 @@
+from email.policy import default
 import os
 import shutil
 from tkinter import E
@@ -9,7 +10,7 @@ from collections import defaultdict
 import re
 
 gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
-Weapons = {}
+Weapons  = {}
 
 class CommentedTreeBuilder(ET.TreeBuilder):
     def comment(self, data):
@@ -72,7 +73,12 @@ def read_and_convert_weapons(weapon_path):
 	with open('Weapons.json', 'w') as f:
 		json.dump(weapons, f, indent=4, separators=(", ", " = "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
+	
+	global Weapons
 	Weapons = weapons
+
+
+
 
 
 def read_and_convert_mechpaks(mech_dir):
@@ -85,12 +91,15 @@ def read_and_convert_mechpaks(mech_dir):
 
 	mechs = defaultdict(dict)
 	
+	# Create list of hardpoint aliases to determine component hardpoint list
 	HardpointTypeAliases = defaultdict(dict)
 	for w in Weapons.values():
 		if w["type"] in HardpointTypeAliases:
 			HardpointTypeAliases[w["type"]].update(w["HardpointAliases"]) 
 		else:
-			HardpointTypeAliases[w["type"]] = w["HardpointAliases"]
+			HardpointTypeAliases[w["type"]] = set(w["HardpointAliases"])
+	for ht in HardpointTypeAliases:
+		HardpointTypeAliases[ht].update([ht])
 
 	for file in os.listdir(mech_dir):
 		if file.endswith(".pak"):
@@ -155,8 +164,8 @@ def read_and_convert_mechpaks(mech_dir):
 							root = tree.getroot()
 
 							omniComponents = defaultdict(dict)							
-							for set in root.iter("Set"):
-								setName = set.get("name")
+							for s in root.iter("Set"):
+								setName = s.get("name")
 								omniComponents[setName]["SetBonuses"] = defaultdict(dict)
 								#print("testing: ")
 								#print(data["mechs"][mech_name])
@@ -164,7 +173,7 @@ def read_and_convert_mechpaks(mech_dir):
 								#for v in data["mechs"][mech_name]["variants"]:
 									#print(setName.upper() == v)
 								data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"] = defaultdict(dict)
-								for setBonus in set.iter("Bonus"):
+								for setBonus in s.iter("Bonus"):
 									count = setBonus.get("PieceCount")
 									quirks = {}
 									for q in setBonus.iter('Quirk'):
@@ -173,7 +182,7 @@ def read_and_convert_mechpaks(mech_dir):
 									#omniComponents[setName]["SetBonuses"][count] = quirks
 									data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"][count] = quirks
 
-								for component in set.iter("component"):
+								for component in s.iter("component"):
 									quirks = {}
 									hardpointIds = []
 									for q in component.iter('Quirk'):
@@ -194,41 +203,42 @@ def read_and_convert_mechpaks(mech_dir):
 
 
 							def get_weapon_type(testingNames):
+								
 								for t in HardpointTypeAliases:
 									if any(n in testingNames for n in HardpointTypeAliases[t]):
 										return t
 								print("error: hardpoint not found\n", testingNames, "\n-\n", HardpointTypeAliases)
 								return ""
 
-
-								# energyAliases = ["Missile20"]
-								# if any(n in names for n in energyAliases):
-								# 	return "Energy"
-
-							hardpointIndex = {}
+							hardpointIndex = defaultdict(dict)
 							for hardpoint in root.iter("Hardpoint"):
 								for w in hardpoint.iter("WeaponSlot"):
-									t = get_weapon_type(attachment.get("search") for attachment in w)
+									names = []
+									for a in w.iter("Attachment"):
+										names.append(a.get("search"))
+									t = get_weapon_type(names) #get_weapon_type(attachment.get("search") for attachment in w)
 									if t in hardpointIndex:
-										hardpointIndex[t] += 1
+										hardpointIndex[int(hardpoint.get("id"))][t] += 1
 									else:
-										hardpointIndex[t] = 1
+										hardpointIndex[int(hardpoint.get("id"))][t] = 1
 							#data["mechs"][mech_name]
 
 
 							for variant in data["mechs"][mech_name]["Variants"].values():
 								for component in variant["ComponentList"].values():
-									cHardpoints = {}
+									componentHardpoints = defaultdict(dict)
 									for hid in component["HardpointIds"]:
 										if hid not in hardpointIndex:
 											print("error: hardpoint not found in index: "+str(hid)+" for "+mechvariant)
 											continue
-										hinfo = hardpointIndex[hid]
-										if hinfo["type"] in cHardpoints:
-											cHardpoints[hinfo["type"]] += hinfo["amount"]
-										else:
-											cHardpoints[hinfo["type"]] = hinfo["amount"]
-									component["Hardpoints"] = cHardpoints
+										for hptype in hardpointIndex[hid]:
+
+										#hinfo = hardpointIndex[hid]
+											if  hptype in componentHardpoints:
+												componentHardpoints[hptype] += hardpointIndex[hid][hptype]
+											else:
+												componentHardpoints[hptype] = hardpointIndex[hid][hptype]
+									component["Hardpoints"] = componentHardpoints
 
 							
 
