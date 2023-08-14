@@ -254,7 +254,7 @@ def read_and_convert_mechpaks(mech_dir):
 	#print(data)				
 	print("writing json:\n")
 	with open('Mechs.json', 'w') as f:
-		json.dump(data, f, indent=4, separators=(", ", " = "), sort_keys=True)					
+		json.dump(data, f, indent=4, separators=(",", ": "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
 
 def readVersion(source_file):
