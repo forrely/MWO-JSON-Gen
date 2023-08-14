@@ -115,19 +115,7 @@ def read_and_convert_mechpaks(mech_dir):
 							mechvariant = os.path.basename(member)
 							openedFile = zip_ref.open(member)
 
-							variant = {
-								# "Name": "",
-								# "MaxTons": 0,
-								# "BaseTons": 0,
-								# "MaxJumpJets": 0,
-								# "MinEngineRating": 0,
-								# "MaxEngineRating": 0,
-								# "Components": {},
-								# "MovementTuningConfiguration": {},
-								# "QuirkList": {}
-							}
-							#if mech_name not in mechs:
-									#mechs[mech_name]
+							variant = {	}
 							tree = ET.parse(openedFile)
 							#print(tree)
 							root = tree.getroot()
@@ -153,7 +141,7 @@ def read_and_convert_mechpaks(mech_dir):
 							variant["Mech"] = baseStats
 							variant["ComponentList"] = components
 							variant["QuirkList"] = quirks
-							if baseStats["Variant"] == "ANH-1A":
+							if baseStats["Variant"] == "ADR-A":
 								print(variant)
 							data["mechs"][mech_name]["Variants"][baseStats["Variant"].upper()] = variant
 		
@@ -195,7 +183,7 @@ def read_and_convert_mechpaks(mech_dir):
 									
 								
 							#data["mechs"][mech_name]["OmniPods"] = omniComponents
-						
+					for member in zip_ref.namelist():
 						if os.path.basename(member).find("hardpoints") >= 0:
 							openedFile = zip_ref.open(member)
 							tree = ET.parse(openedFile)
@@ -210,22 +198,26 @@ def read_and_convert_mechpaks(mech_dir):
 								print("error: hardpoint not found\n", testingNames, "\n-\n", HardpointTypeAliases)
 								return ""
 
+
+							# Generate hardpoint index (id's to number of each hardpoint type)
 							hardpointIndex = defaultdict(dict)
 							for hardpoint in root.iter("Hardpoint"):
+								id = int(hardpoint.get("id"))
 								for w in hardpoint.iter("WeaponSlot"):
 									names = []
 									for a in w.iter("Attachment"):
 										names.append(a.get("search"))
-									t = get_weapon_type(names) #get_weapon_type(attachment.get("search") for attachment in w)
-									if t in hardpointIndex:
-										hardpointIndex[int(hardpoint.get("id"))][t] += 1
+									attachmentType = get_weapon_type(names) #get_weapon_type(attachment.get("search") for attachment in w)
+									if attachmentType in hardpointIndex[id]:
+										hardpointIndex[id][attachmentType] += 1
 									else:
-										hardpointIndex[int(hardpoint.get("id"))][t] = 1
+										hardpointIndex[id][attachmentType] = 1
 							#data["mechs"][mech_name]
 
 
-							for variant in data["mechs"][mech_name]["Variants"].values():
-								for component in variant["ComponentList"].values():
+							# Assign hardpoint info to each mech component by matching with hardpoint id in index
+							for vname,variant in data["mechs"][mech_name]["Variants"].items():
+								for cname, component in variant["ComponentList"].items():
 									componentHardpoints = defaultdict(dict)
 									for hid in component["HardpointIds"]:
 										if hid not in hardpointIndex:
