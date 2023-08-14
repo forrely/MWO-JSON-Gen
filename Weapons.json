@@ -1,1686 +1,1689 @@
 {
-    "AntiMissileSystem" = {
-        "HardpointAliases" = [
-            "AntiMissileSystem", 
-            "ISAntiMissileSystem"
-        ], 
-        "id" = "1014", 
-        "inheritId" = null, 
-        "type" = "AMS"
-    }, 
-    "AutoCannon10" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon10", 
-            "ISAutoCannon", 
-            "ISAC", 
-            "ISAutoCannon10"
-        ], 
-        "id" = "1020", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "AutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon2", 
-            "ISAutoCannon", 
-            "ISAC", 
-            "ISAutoCannon2"
-        ], 
-        "id" = "1018", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "AutoCannon20" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon20", 
-            "ISAutoCannon", 
-            "ISAC", 
-            "ISAutoCannon20"
-        ], 
-        "id" = "1000", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "AutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon5", 
-            "ISAutoCannon", 
-            "ISAC", 
-            "ISAutoCannon5"
-        ], 
-        "id" = "1019", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanATM12" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile12", 
-            "ATM", 
-            "ATM12", 
-            "ClanATM", 
-            "ClanATM12"
-        ], 
-        "id" = "1252", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanATM3" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile3", 
-            "ATM", 
-            "ATM3", 
-            "ClanATM", 
-            "ClanATM3"
-        ], 
-        "id" = "1249", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanATM6" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "ATM", 
-            "ATM6", 
-            "ClanATM", 
-            "ClanATM6"
-        ], 
-        "id" = "1250", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanATM9" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile9", 
-            "ATM", 
-            "ATM9", 
-            "ClanATM", 
-            "ClanATM9"
-        ], 
-        "id" = "1251", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanAntiMissileSystem" = {
-        "HardpointAliases" = [
-            "AntiMissileSystem", 
-            "ClanAntiMissileSystem"
-        ], 
-        "id" = "1237", 
-        "inheritId" = null, 
-        "type" = "AMS"
-    }, 
-    "ClanAutoCannon10" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon10", 
-            "ClanAutoCannon", 
-            "ClanAC", 
-            "ClanAutoCannon10"
-        ], 
-        "id" = "1240", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanAutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon2", 
-            "ClanAutoCannon", 
-            "ClanAC", 
-            "ClanAutoCannon2"
-        ], 
-        "id" = "1238", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanAutoCannon20" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon20", 
-            "ClanAutoCannon", 
-            "ClanAC", 
-            "ClanAutoCannon20"
-        ], 
-        "id" = "1241", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanAutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "AutoCannon", 
-            "AC", 
-            "AutoCannon5", 
-            "ClanAutoCannon", 
-            "ClanAC", 
-            "ClanAutoCannon5"
-        ], 
-        "id" = "1239", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanERLargeLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "LargeLaser", 
-            "ERLaser", 
-            "ERLargeLaser", 
-            "ClanLaser", 
-            "ClanLargeLaserFamily", 
-            "ClanLargeLaser", 
-            "ClanERLaser", 
-            "ClanERLargeLaser", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser", 
-            "SolarisRestricted"
-        ], 
-        "id" = "1213", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanERMediumLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "MediumLaser", 
-            "ERLaser", 
-            "ERMediumLaser", 
-            "ClanLaser", 
-            "ClanMediumLaserFamily", 
-            "ClanMediumLaser", 
-            "ClanERLaser", 
-            "ClanERMediumLaser", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser"
-        ], 
-        "id" = "1212", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanERMicroLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "MicroLaser", 
-            "ERLaser", 
-            "ERMicroLaser", 
-            "ClanLaser", 
-            "ClanMicroLaserFamily", 
-            "ClanMicroLaser", 
-            "ClanERLaser", 
-            "ClanERMicroLaser", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser"
-        ], 
-        "id" = "1244", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanERPPC" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "LargeWeapon", 
-            "PPC", 
-            "ERPPC", 
-            "ClanPPC", 
-            "ClanERPPC", 
-            "PPCFamily", 
-            "SolarisRestricted"
-        ], 
-        "id" = "1217", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanERSmallLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "SmallLaser", 
-            "ERLaser", 
-            "ERSmallLaser", 
-            "ClanLaser", 
-            "ClanSmallLaserFamily", 
-            "ClanSmallLaser", 
-            "ClanERLaser", 
-            "ClanERSmallLaser", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser"
-        ], 
-        "id" = "1211", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanFlamer" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Flamer", 
-            "ClanFlamer"
-        ], 
-        "id" = "1210", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanGaussRifle" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "GaussRifle", 
-            "ClanGaussRifle"
-        ], 
-        "id" = "1208", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanHeavyLargeLsr" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "LargeLaser", 
-            "HeavyLaser", 
-            "HeavyLargeLaser", 
-            "ClanLaser", 
-            "ClanLargeLaserFamily", 
-            "ClanLargeLaser", 
-            "ClanHeavyLaser", 
-            "ClanHeavyLargeLsr", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser", 
-            "SolarisRestricted"
-        ], 
-        "id" = "1248", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanHeavyMachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "HeavyMachineGun", 
-            "ClanMachineGun", 
-            "ClanHeavyMachineGun", 
-            ""
-        ], 
-        "id" = "1243", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanHeavyMediumLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "MediumLaser", 
-            "HeavyLaser", 
-            "HeavyMediumLaser", 
-            "ClanLaser", 
-            "ClanMediumLaserFamily", 
-            "ClanMediumLaser", 
-            "ClanHeavyLaser", 
-            "ClanHeavyMediumLaser", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser"
-        ], 
-        "id" = "1247", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanHeavySmallLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "SmallLaser", 
-            "HeavyLaser", 
-            "HeavySmallLaser", 
-            "ClanLaser", 
-            "ClanSmallLaserFamily", 
-            "ClanSmallLaser", 
-            "ClanHeavyLaser", 
-            "ClanHeavySmallLaser", 
-            "NonPulseLaser", 
-            "ClanNonPulseLaser"
-        ], 
-        "id" = "1246", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanLBXAutoCannon10" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon10", 
-            "ClanLBXAutoCannon", 
-            "ClanLBXAutoCannon10"
-        ], 
-        "id" = "1202", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanLBXAutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon2", 
-            "ClanLBXAutoCannon", 
-            "ClanLBXAutoCannon2"
-        ], 
-        "id" = "1200", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanLBXAutoCannon20" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon20", 
-            "ClanLBXAutoCannon", 
-            "ClanLBXAutoCannon20"
-        ], 
-        "id" = "1203", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanLBXAutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon5", 
-            "ClanLBXAutoCannon", 
-            "ClanLBXAutoCannon5"
-        ], 
-        "id" = "1201", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanLRM10" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile10", 
-            "LRM", 
-            "LRM10", 
-            "ClanLRM", 
-            "ClanLRM10"
-        ], 
-        "id" = "1219", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanLRM10_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile10", 
-            "LRM", 
-            "LRM10", 
-            "LRM10_Artemis", 
-            "ClanLRM", 
-            "ClanLRM10", 
-            "ClanLRM10_Artemis"
-        ], 
-        "id" = "1223", 
-        "inheritId" = "1219", 
-        "type" = "Missile"
-    }, 
-    "ClanLRM15" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile15", 
-            "LRM", 
-            "LRM15", 
-            "ClanLRM", 
-            "ClanLRM15"
-        ], 
-        "id" = "1220", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanLRM15_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile15", 
-            "LRM", 
-            "LRM15", 
-            "LRM15_Artemis", 
-            "ClanLRM", 
-            "ClanLRM15", 
-            "ClanLRM15_Artemis"
-        ], 
-        "id" = "1224", 
-        "inheritId" = "1220", 
-        "type" = "Missile"
-    }, 
-    "ClanLRM20" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile20", 
-            "LRM", 
-            "LRM20", 
-            "ClanLRM", 
-            "ClanLRM20"
-        ], 
-        "id" = "1221", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanLRM20_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile20", 
-            "LRM", 
-            "LRM20", 
-            "LRM20_Artemis", 
-            "ClanLRM", 
-            "ClanLRM20", 
-            "ClanLRM20_Artemis"
-        ], 
-        "id" = "1225", 
-        "inheritId" = "1221", 
-        "type" = "Missile"
-    }, 
-    "ClanLRM5" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile5", 
-            "LRM", 
-            "LRM5", 
-            "ClanLRM", 
-            "ClanLRM5"
-        ], 
-        "id" = "1218", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanLRM5_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile5", 
-            "LRM", 
-            "LRM5", 
-            "LRM5_Artemis", 
-            "ClanLRM", 
-            "ClanLRM5", 
-            "ClanLRM5_Artemis"
-        ], 
-        "id" = "1222", 
-        "inheritId" = "1218", 
-        "type" = "Missile"
-    }, 
-    "ClanLargePulseLsr" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "LargeLaser", 
-            "PulseLaser", 
-            "LargePulseLaser", 
-            "ClanLaser", 
-            "ClanLargeLaserFamily", 
-            "ClanLargeLaser", 
-            "ClanPulseLaser", 
-            "ClanLargePulseLsr", 
-            "SolarisRestricted"
-        ], 
-        "id" = "1216", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanLaserAntiMissileSystem" = {
-        "HardpointAliases" = [
-            "ClanAntiMissileSystem", 
-            "LaserAntiMissileSystem", 
-            "ClanLaserAntiMissileSystem"
-        ], 
-        "id" = "1254", 
-        "inheritId" = null, 
-        "type" = "AMS"
-    }, 
-    "ClanLightMachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LightMachineGun", 
-            "ClanMachineGun", 
-            "ClanLightMachineGun", 
-            ""
-        ], 
-        "id" = "1242", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanLightTAG" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "TAG", 
-            "ClanTAG", 
-            "LightTAG", 
-            "ClanLightTAG"
-        ], 
-        "id" = "1253", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanMachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "MachineGun", 
-            "ClanMachineGun", 
-            ""
-        ], 
-        "id" = "1209", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanMediumPulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "MediumLaser", 
-            "PulseLaser", 
-            "MediumPulseLaser", 
-            "ClanLaser", 
-            "ClanMediumLaserFamily", 
-            "ClanMediumLaser", 
-            "ClanPulseLaser", 
-            "ClanMediumPulseLaser"
-        ], 
-        "id" = "1215", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanMicroPulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "MicroLaser", 
-            "PulseLaser", 
-            "MicroPulseLaser", 
-            "ClanLaser", 
-            "ClanMicroLaserFamily", 
-            "ClanMicroLaser", 
-            "ClanPulseLaser", 
-            "ClanMicroPulseLaser"
-        ], 
-        "id" = "1245", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanNarcBeacon" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile1", 
-            "NarcBeacon", 
-            "ClanNarcBeacon"
-        ], 
-        "id" = "1235", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanSRM2" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile2", 
-            "SRM", 
-            "SRM2", 
-            "ClanSRM", 
-            "ClanSRM2"
-        ], 
-        "id" = "1226", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanSRM2_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile2", 
-            "SRM", 
-            "SRM2", 
-            "SRM_Artemis", 
-            "SRM2_Artemis", 
-            "ClanSRM", 
-            "ClanSRM2", 
-            "ClanSRM_Artemis", 
-            "ClanSRM2_Artemis"
-        ], 
-        "id" = "1229", 
-        "inheritId" = "1226", 
-        "type" = "Missile"
-    }, 
-    "ClanSRM4" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile4", 
-            "SRM", 
-            "SRM4", 
-            "ClanSRM", 
-            "ClanSRM4"
-        ], 
-        "id" = "1227", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanSRM4_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile4", 
-            "SRM", 
-            "SRM4", 
-            "SRM_Artemis", 
-            "SRM4_Artemis", 
-            "ClanSRM", 
-            "ClanSRM4", 
-            "ClanSRM_Artemis", 
-            "ClanSRM4_Artemis"
-        ], 
-        "id" = "1230", 
-        "inheritId" = "1227", 
-        "type" = "Missile"
-    }, 
-    "ClanSRM6" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "SRM", 
-            "SRM6", 
-            "ClanSRM", 
-            "ClanSRM6"
-        ], 
-        "id" = "1228", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanSRM6_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "SRM", 
-            "SRM6", 
-            "SRM_Artemis", 
-            "SRM6_Artemis", 
-            "ClanSRM", 
-            "ClanSRM6", 
-            "ClanSRM_Artemis", 
-            "ClanSRM6_Artemis"
-        ], 
-        "id" = "1231", 
-        "inheritId" = "1228", 
-        "type" = "Missile"
-    }, 
-    "ClanSmallPulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "SmallLaser", 
-            "PulseLaser", 
-            "SmallPulseLaser", 
-            "ClanLaser", 
-            "ClanSmallLaserFamily", 
-            "ClanSmallLaser", 
-            "ClanPulseLaser", 
-            "ClanSmallPulseLaser"
-        ], 
-        "id" = "1214", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanStreakSRM2" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile2", 
-            "StreakSRM", 
-            "StreakSRM2", 
-            "ClanStreakSRM", 
-            "ClanStreakSRM2"
-        ], 
-        "id" = "1232", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanStreakSRM4" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile4", 
-            "StreakSRM", 
-            "StreakSRM4", 
-            "ClanStreakSRM", 
-            "ClanStreakSRM4"
-        ], 
-        "id" = "1233", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanStreakSRM6" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "StreakSRM", 
-            "StreakSRM6", 
-            "ClanStreakSRM", 
-            "ClanStreakSRM6"
-        ], 
-        "id" = "1234", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "ClanTAG" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "TAG", 
-            "ClanTAG"
-        ], 
-        "id" = "1236", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ClanUltraAutoCannon10" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon10", 
-            "ClanUltraAutoCannon", 
-            "ClanUltraAutoCannon10"
-        ], 
-        "id" = "1206", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanUltraAutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon2", 
-            "ClanUltraAutoCannon", 
-            "ClanUltraAutoCannon2"
-        ], 
-        "id" = "1204", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanUltraAutoCannon20" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon20", 
-            "ClanUltraAutoCannon", 
-            "ClanUltraAutoCannon20"
-        ], 
-        "id" = "1207", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "ClanUltraAutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon5", 
-            "ClanUltraAutoCannon", 
-            "ClanUltraAutoCannon5"
-        ], 
-        "id" = "1205", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "DropShipLargePulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "LargeLaser", 
-            "PulseLaser", 
-            "LargePulseLaser", 
-            "ISLaser", 
-            "ISLargeLaserFamily", 
-            "ISPulseLaser", 
-            "ISLargePulseLaser"
-        ], 
-        "id" = "1998", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ERLargeLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "LargeLaser", 
-            "ERLaser", 
-            "ERLargeLaser", 
-            "ISLaser", 
-            "ISLargeLaserFamily", 
-            "ISERLaser", 
-            "ISERLargeLaser", 
-            "NonPulseLaser", 
-            "ISNonPulseLaser"
-        ], 
-        "id" = "1005", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ERMediumLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "ERLaser", 
-            "MediumLaser", 
-            "ISLaser", 
-            "ISERLaser", 
-            "ISMediumLaserFamily", 
-            "ISMediumLaser", 
-            "ISERMediumLaser", 
-            "NonPulseLaser", 
-            "ISNonPulseLaser"
-        ], 
-        "id" = "1046", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ERPPC" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "LargeWeapon", 
-            "PPC", 
-            "ERPPC", 
-            "ISPPC", 
-            "ISERPPC", 
-            "PPCFamily"
-        ], 
-        "id" = "1006", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "ERSmallLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "ERLaser", 
-            "SmallLaser", 
-            "ISLaser", 
-            "ISERLaser", 
-            "ISSmallLaserFamily", 
-            "ISSmallLaser", 
-            "ISERSmallLaser", 
-            "NonPulseLaser", 
-            "ISNonPulseLaser"
-        ], 
-        "id" = "1045", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "FakeMachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "MachineGun", 
-            "ISMachineGun"
-        ], 
-        "id" = "1999", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "Flamer" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Flamer", 
-            "ISFlamer"
-        ], 
-        "id" = "1007", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "GaussRifle" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "GaussRifle", 
-            "ISGaussRifle"
-        ], 
-        "id" = "1021", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "HeavyGaussRifle" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "ISGaussRifle", 
-            "HeavyGaussRifle", 
-            "ISHeavyGaussRifle"
-        ], 
-        "id" = "1057", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "HeavyMachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "ISMachineGun", 
-            "HeavyMachineGun", 
-            "ISHeavyMachineGun"
-        ], 
-        "id" = "1061", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "HeavyPPC" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "LargeWeapon", 
-            "HeavyPPC", 
-            "ISPPC", 
-            "ISHeavyPPC", 
-            "PPCFamily", 
-            "SolarisRestricted"
-        ], 
-        "id" = "1048", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "LBXAutoCannon10" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon10", 
-            "ISLBXAutoCannon", 
-            "ISLBXAutoCannon10"
-        ], 
-        "id" = "1023", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "LBXAutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon2", 
-            "ISLBXAutoCannon", 
-            "ISLBXAutoCannon2"
-        ], 
-        "id" = "1050", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "LBXAutoCannon20" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon20", 
-            "ISLBXAutoCannon", 
-            "ISLBXAutoCannon20"
-        ], 
-        "id" = "1052", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "LBXAutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "LBXAutoCannon", 
-            "LBXAutoCannon5", 
-            "ISLBXAutoCannon", 
-            "ISLBXAutoCannon5"
-        ], 
-        "id" = "1051", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "LRM10" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile10", 
-            "LRM", 
-            "LRM10", 
-            "ISLRM", 
-            "ISLRM10"
-        ], 
-        "id" = "1027", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "LRM10_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile10", 
-            "LRM", 
-            "LRM10", 
-            "LRM_Artemis", 
-            "LRM10_Artemis", 
-            "ISLRM", 
-            "ISLRM10", 
-            "ISLRM_Artemis", 
-            "ISLRM10_Artemis"
-        ], 
-        "id" = "1042", 
-        "inheritId" = "1027", 
-        "type" = "Missile"
-    }, 
-    "LRM15" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile15", 
-            "LRM", 
-            "LRM15", 
-            "ISLRM", 
-            "ISLRM15"
-        ], 
-        "id" = "1028", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "LRM15_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile15", 
-            "LRM", 
-            "LRM15", 
-            "LRM_Artemis", 
-            "LRM15_Artemis", 
-            "ISLRM", 
-            "ISLRM15", 
-            "ISLRM_Artemis", 
-            "ISLRM15_Artemis"
-        ], 
-        "id" = "1043", 
-        "inheritId" = "1028", 
-        "type" = "Missile"
-    }, 
-    "LRM20" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile20", 
-            "LRM", 
-            "LRM20", 
-            "ISLRM", 
-            "ISLRM20"
-        ], 
-        "id" = "1002", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "LRM20_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile20", 
-            "LRM", 
-            "LRM20", 
-            "LRM_Artemis", 
-            "LRM20_Artemis", 
-            "ISLRM", 
-            "ISLRM20", 
-            "ISLRM_Artemis", 
-            "ISLRM20_Artemis"
-        ], 
-        "id" = "1044", 
-        "inheritId" = "1002", 
-        "type" = "Missile"
-    }, 
-    "LRM5" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile5", 
-            "LRM", 
-            "LRM5", 
-            "ISLRM", 
-            "ISLRM5"
-        ], 
-        "id" = "1026", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "LRM5_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile5", 
-            "LRM", 
-            "LRM5", 
-            "LRM_Artemis", 
-            "LRM5_Artemis", 
-            "ISLRM", 
-            "ISLRM5", 
-            "ISLRM_Artemis", 
-            "ISLRM5_Artemis"
-        ], 
-        "id" = "1041", 
-        "inheritId" = "1026", 
-        "type" = "Missile"
-    }, 
-    "LargeLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "StdLaser", 
-            "LargeLaser", 
-            "ISLaser", 
-            "ISStdLaser", 
-            "ISLargeLaserFamily", 
-            "ISLargeLaser", 
-            "NonPulseLaser", 
-            "ISNonPulseLaser"
-        ], 
-        "id" = "1008", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "LargePulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "LargeLaser", 
-            "PulseLaser", 
-            "LargePulseLaser", 
-            "ISLaser", 
-            "ISLargeLaserFamily", 
-            "ISPulseLaser", 
-            "ISLargePulseLaser"
-        ], 
-        "id" = "1010", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "LaserAntiMissileSystem" = {
-        "HardpointAliases" = [
-            "ISAntiMissileSystem", 
-            "LaserAntiMissileSystem", 
-            "ISLaserAntiMissileSystem"
-        ], 
-        "id" = "1071", 
-        "inheritId" = null, 
-        "type" = "AMS"
-    }, 
-    "LightGaussRifle" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "ISGaussRifle", 
-            "LightGaussRifle", 
-            "ISLightGaussRifle"
-        ], 
-        "id" = "1056", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "LightMachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "ISMachineGun", 
-            "LightMachineGun", 
-            "ISLightMachineGun"
-        ], 
-        "id" = "1060", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "LightPPC" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "LargeWeapon", 
-            "LightPPC", 
-            "ISPPC", 
-            "ISLightPPC", 
-            "PPCFamily"
-        ], 
-        "id" = "1047", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "MRM10" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile10", 
-            "MRM", 
-            "MRM10", 
-            "ISMRM", 
-            "ISMRM10"
-        ], 
-        "id" = "1064", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "MRM20" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile20", 
-            "MRM", 
-            "MRM20", 
-            "ISMRM", 
-            "ISMRM20"
-        ], 
-        "id" = "1065", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "MRM30" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile30", 
-            "MRM", 
-            "MRM30", 
-            "ISMRM", 
-            "ISMRM30"
-        ], 
-        "id" = "1066", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "MRM40" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile40", 
-            "MRM", 
-            "MRM40", 
-            "ISMRM", 
-            "ISMRM40"
-        ], 
-        "id" = "1067", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "MachineGun" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "MachineGun", 
-            "ISMachineGun"
-        ], 
-        "id" = "1024", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "MediumLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "StdLaser", 
-            "MediumLaser", 
-            "ISLaser", 
-            "ISStdLaser", 
-            "ISMediumLaserFamily", 
-            "ISMediumLaser", 
-            "NonPulseLaser", 
-            "ISNonPulseLaser"
-        ], 
-        "id" = "1001", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "MediumPulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "MediumLaser", 
-            "PulseLaser", 
-            "MediumPulseLaser", 
-            "ISLaser", 
-            "ISMediumLaserFamily", 
-            "ISPulseLaser", 
-            "ISMediumPulseLaser"
-        ], 
-        "id" = "1011", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "NarcBeacon" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile1", 
-            "NarcBeacon", 
-            "ISNarcBeacon"
-        ], 
-        "id" = "1029", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "PPC" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "LargeWeapon", 
-            "PPC", 
-            "ISPPC", 
-            "ISStandardPPC", 
-            "PPCFamily"
-        ], 
-        "id" = "1009", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "RocketLauncher10" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "RocketLauncher", 
-            "RocketLauncher10", 
-            "RL", 
-            "RL10", 
-            "ISRL", 
-            "ISRL10"
-        ], 
-        "id" = "1068", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "RocketLauncher15" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "RocketLauncher", 
-            "RocketLauncher15", 
-            "RL", 
-            "RL15", 
-            "ISRL", 
-            "ISRL15"
-        ], 
-        "id" = "1069", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "RocketLauncher20" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "RocketLauncher", 
-            "RocketLauncher20", 
-            "RL", 
-            "RL20", 
-            "ISRL", 
-            "ISRL20"
-        ], 
-        "id" = "1070", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "RotaryAutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "RotaryAutoCannon", 
-            "RotaryAutoCannon2", 
-            "ISRotaryAutoCannon", 
-            "ISRotaryAutoCannon2"
-        ], 
-        "id" = "1058", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "RotaryAutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "RotaryAutoCannon", 
-            "RotaryAutoCannon5", 
-            "ISRotaryAutoCannon", 
-            "ISRotaryAutoCannon5"
-        ], 
-        "id" = "1059", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "SRM2" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile2", 
-            "SRM", 
-            "SRM2", 
-            "ISSRM", 
-            "ISSRM2"
-        ], 
-        "id" = "1030", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "SRM2_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile2", 
-            "SRM", 
-            "SRM2", 
-            "SRM_Artemis", 
-            "SRM2_Artemis", 
-            "ISSRM", 
-            "ISSRM2", 
-            "ISSRM_Artemis", 
-            "ISSRM2_Artemis"
-        ], 
-        "id" = "1038", 
-        "inheritId" = "1030", 
-        "type" = "Missile"
-    }, 
-    "SRM4" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile4", 
-            "SRM", 
-            "SRM4", 
-            "ISSRM", 
-            "ISSRM4"
-        ], 
-        "id" = "1004", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "SRM4_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile4", 
-            "SRM", 
-            "SRM4", 
-            "SRM_Artemis", 
-            "SRM4_Artemis", 
-            "ISSRM", 
-            "ISSRM4", 
-            "ISSRM_Artemis", 
-            "ISSRM4_Artemis"
-        ], 
-        "id" = "1039", 
-        "inheritId" = "1004", 
-        "type" = "Missile"
-    }, 
-    "SRM6" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "SRM", 
-            "SRM6", 
-            "ISSRM", 
-            "ISSRM6"
-        ], 
-        "id" = "1031", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "SRM6_Artemis" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "SRM", 
-            "SRM6", 
-            "SRM_Artemis", 
-            "SRM6_Artemis", 
-            "ISSRM", 
-            "ISSRM6", 
-            "ISSRM_Artemis", 
-            "ISSRM6_Artemis"
-        ], 
-        "id" = "1040", 
-        "inheritId" = "1031", 
-        "type" = "Missile"
-    }, 
-    "SmallLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "StdLaser", 
-            "SmallLaser", 
-            "ISLaser", 
-            "ISStdLaser", 
-            "ISSmallLaserFamily", 
-            "ISSmallLaser", 
-            "NonPulseLaser", 
-            "ISNonPulseLaser"
-        ], 
-        "id" = "1003", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "SmallPulseLaser" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "SmallLaser", 
-            "PulseLaser", 
-            "SmallPulseLaser", 
-            "ISLaser", 
-            "ISSmallLaserFamily", 
-            "ISPulseLaser", 
-            "ISSmallPulseLaser"
-        ], 
-        "id" = "1012", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "SnubNosePPC" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "LargeWeapon", 
-            "SnubNosePPC", 
-            "ISPPC", 
-            "ISSnubNosePPC", 
-            "PPCFamily"
-        ], 
-        "id" = "1049", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "StreakSRM2" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile2", 
-            "StreakSRM", 
-            "StreakSRM2", 
-            "ISStreakSRM", 
-            "ISStreakSRM2"
-        ], 
-        "id" = "1032", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "StreakSRM4" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile4", 
-            "StreakSRM", 
-            "StreakSRM4", 
-            "ISStreakSRM", 
-            "ISStreakSRM4"
-        ], 
-        "id" = "1062", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "StreakSRM6" = {
-        "HardpointAliases" = [
-            "Missile", 
-            "Missile6", 
-            "StreakSRM", 
-            "StreakSRM6", 
-            "ISStreakSRM", 
-            "ISStreakSRM6"
-        ], 
-        "id" = "1063", 
-        "inheritId" = null, 
-        "type" = "Missile"
-    }, 
-    "TAG" = {
-        "HardpointAliases" = [
-            "Energy", 
-            "Laser", 
-            "TAG", 
-            "ISLaser", 
-            "ISTAG"
-        ], 
-        "id" = "1037", 
-        "inheritId" = null, 
-        "type" = "Energy"
-    }, 
-    "UltraAutoCannon10" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon10", 
-            "ISUltraAutoCannon", 
-            "ISUltraAutoCannon10"
-        ], 
-        "id" = "1054", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "UltraAutoCannon2" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon2", 
-            "ISUltraAutoCannon", 
-            "ISUltraAutoCannon2"
-        ], 
-        "id" = "1053", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "UltraAutoCannon20" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon20", 
-            "ISUltraAutoCannon", 
-            "ISUltraAutoCannon20"
-        ], 
-        "id" = "1055", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
-    }, 
-    "UltraAutoCannon5" = {
-        "HardpointAliases" = [
-            "Ballistic", 
-            "LargeWeapon", 
-            "UltraAutoCannon", 
-            "UltraAutoCannon5", 
-            "ISUltraAutoCannon", 
-            "ISUltraAutoCannon5"
-        ], 
-        "id" = "1025", 
-        "inheritId" = null, 
-        "type" = "Ballistic"
+    "_GameVersion" = "1.4.280.0", 
+    "weapons" = {
+        "AntiMissileSystem" = {
+            "HardpointAliases" = [
+                "AntiMissileSystem", 
+                "ISAntiMissileSystem"
+            ], 
+            "id" = "1014", 
+            "inheritId" = null, 
+            "type" = "AMS"
+        }, 
+        "AutoCannon10" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon10", 
+                "ISAutoCannon", 
+                "ISAC", 
+                "ISAutoCannon10"
+            ], 
+            "id" = "1020", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "AutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon2", 
+                "ISAutoCannon", 
+                "ISAC", 
+                "ISAutoCannon2"
+            ], 
+            "id" = "1018", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "AutoCannon20" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon20", 
+                "ISAutoCannon", 
+                "ISAC", 
+                "ISAutoCannon20"
+            ], 
+            "id" = "1000", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "AutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon5", 
+                "ISAutoCannon", 
+                "ISAC", 
+                "ISAutoCannon5"
+            ], 
+            "id" = "1019", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanATM12" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile12", 
+                "ATM", 
+                "ATM12", 
+                "ClanATM", 
+                "ClanATM12"
+            ], 
+            "id" = "1252", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanATM3" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile3", 
+                "ATM", 
+                "ATM3", 
+                "ClanATM", 
+                "ClanATM3"
+            ], 
+            "id" = "1249", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanATM6" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "ATM", 
+                "ATM6", 
+                "ClanATM", 
+                "ClanATM6"
+            ], 
+            "id" = "1250", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanATM9" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile9", 
+                "ATM", 
+                "ATM9", 
+                "ClanATM", 
+                "ClanATM9"
+            ], 
+            "id" = "1251", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanAntiMissileSystem" = {
+            "HardpointAliases" = [
+                "AntiMissileSystem", 
+                "ClanAntiMissileSystem"
+            ], 
+            "id" = "1237", 
+            "inheritId" = null, 
+            "type" = "AMS"
+        }, 
+        "ClanAutoCannon10" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon10", 
+                "ClanAutoCannon", 
+                "ClanAC", 
+                "ClanAutoCannon10"
+            ], 
+            "id" = "1240", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanAutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon2", 
+                "ClanAutoCannon", 
+                "ClanAC", 
+                "ClanAutoCannon2"
+            ], 
+            "id" = "1238", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanAutoCannon20" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon20", 
+                "ClanAutoCannon", 
+                "ClanAC", 
+                "ClanAutoCannon20"
+            ], 
+            "id" = "1241", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanAutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "AutoCannon", 
+                "AC", 
+                "AutoCannon5", 
+                "ClanAutoCannon", 
+                "ClanAC", 
+                "ClanAutoCannon5"
+            ], 
+            "id" = "1239", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanERLargeLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "LargeLaser", 
+                "ERLaser", 
+                "ERLargeLaser", 
+                "ClanLaser", 
+                "ClanLargeLaserFamily", 
+                "ClanLargeLaser", 
+                "ClanERLaser", 
+                "ClanERLargeLaser", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser", 
+                "SolarisRestricted"
+            ], 
+            "id" = "1213", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanERMediumLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "MediumLaser", 
+                "ERLaser", 
+                "ERMediumLaser", 
+                "ClanLaser", 
+                "ClanMediumLaserFamily", 
+                "ClanMediumLaser", 
+                "ClanERLaser", 
+                "ClanERMediumLaser", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser"
+            ], 
+            "id" = "1212", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanERMicroLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "MicroLaser", 
+                "ERLaser", 
+                "ERMicroLaser", 
+                "ClanLaser", 
+                "ClanMicroLaserFamily", 
+                "ClanMicroLaser", 
+                "ClanERLaser", 
+                "ClanERMicroLaser", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser"
+            ], 
+            "id" = "1244", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanERPPC" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "LargeWeapon", 
+                "PPC", 
+                "ERPPC", 
+                "ClanPPC", 
+                "ClanERPPC", 
+                "PPCFamily", 
+                "SolarisRestricted"
+            ], 
+            "id" = "1217", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanERSmallLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "SmallLaser", 
+                "ERLaser", 
+                "ERSmallLaser", 
+                "ClanLaser", 
+                "ClanSmallLaserFamily", 
+                "ClanSmallLaser", 
+                "ClanERLaser", 
+                "ClanERSmallLaser", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser"
+            ], 
+            "id" = "1211", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanFlamer" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Flamer", 
+                "ClanFlamer"
+            ], 
+            "id" = "1210", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanGaussRifle" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "GaussRifle", 
+                "ClanGaussRifle"
+            ], 
+            "id" = "1208", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanHeavyLargeLsr" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "LargeLaser", 
+                "HeavyLaser", 
+                "HeavyLargeLaser", 
+                "ClanLaser", 
+                "ClanLargeLaserFamily", 
+                "ClanLargeLaser", 
+                "ClanHeavyLaser", 
+                "ClanHeavyLargeLsr", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser", 
+                "SolarisRestricted"
+            ], 
+            "id" = "1248", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanHeavyMachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "HeavyMachineGun", 
+                "ClanMachineGun", 
+                "ClanHeavyMachineGun", 
+                ""
+            ], 
+            "id" = "1243", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanHeavyMediumLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "MediumLaser", 
+                "HeavyLaser", 
+                "HeavyMediumLaser", 
+                "ClanLaser", 
+                "ClanMediumLaserFamily", 
+                "ClanMediumLaser", 
+                "ClanHeavyLaser", 
+                "ClanHeavyMediumLaser", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser"
+            ], 
+            "id" = "1247", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanHeavySmallLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "SmallLaser", 
+                "HeavyLaser", 
+                "HeavySmallLaser", 
+                "ClanLaser", 
+                "ClanSmallLaserFamily", 
+                "ClanSmallLaser", 
+                "ClanHeavyLaser", 
+                "ClanHeavySmallLaser", 
+                "NonPulseLaser", 
+                "ClanNonPulseLaser"
+            ], 
+            "id" = "1246", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanLBXAutoCannon10" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon10", 
+                "ClanLBXAutoCannon", 
+                "ClanLBXAutoCannon10"
+            ], 
+            "id" = "1202", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanLBXAutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon2", 
+                "ClanLBXAutoCannon", 
+                "ClanLBXAutoCannon2"
+            ], 
+            "id" = "1200", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanLBXAutoCannon20" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon20", 
+                "ClanLBXAutoCannon", 
+                "ClanLBXAutoCannon20"
+            ], 
+            "id" = "1203", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanLBXAutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon5", 
+                "ClanLBXAutoCannon", 
+                "ClanLBXAutoCannon5"
+            ], 
+            "id" = "1201", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanLRM10" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile10", 
+                "LRM", 
+                "LRM10", 
+                "ClanLRM", 
+                "ClanLRM10"
+            ], 
+            "id" = "1219", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanLRM10_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile10", 
+                "LRM", 
+                "LRM10", 
+                "LRM10_Artemis", 
+                "ClanLRM", 
+                "ClanLRM10", 
+                "ClanLRM10_Artemis"
+            ], 
+            "id" = "1223", 
+            "inheritId" = "1219", 
+            "type" = "Missile"
+        }, 
+        "ClanLRM15" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile15", 
+                "LRM", 
+                "LRM15", 
+                "ClanLRM", 
+                "ClanLRM15"
+            ], 
+            "id" = "1220", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanLRM15_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile15", 
+                "LRM", 
+                "LRM15", 
+                "LRM15_Artemis", 
+                "ClanLRM", 
+                "ClanLRM15", 
+                "ClanLRM15_Artemis"
+            ], 
+            "id" = "1224", 
+            "inheritId" = "1220", 
+            "type" = "Missile"
+        }, 
+        "ClanLRM20" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile20", 
+                "LRM", 
+                "LRM20", 
+                "ClanLRM", 
+                "ClanLRM20"
+            ], 
+            "id" = "1221", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanLRM20_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile20", 
+                "LRM", 
+                "LRM20", 
+                "LRM20_Artemis", 
+                "ClanLRM", 
+                "ClanLRM20", 
+                "ClanLRM20_Artemis"
+            ], 
+            "id" = "1225", 
+            "inheritId" = "1221", 
+            "type" = "Missile"
+        }, 
+        "ClanLRM5" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile5", 
+                "LRM", 
+                "LRM5", 
+                "ClanLRM", 
+                "ClanLRM5"
+            ], 
+            "id" = "1218", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanLRM5_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile5", 
+                "LRM", 
+                "LRM5", 
+                "LRM5_Artemis", 
+                "ClanLRM", 
+                "ClanLRM5", 
+                "ClanLRM5_Artemis"
+            ], 
+            "id" = "1222", 
+            "inheritId" = "1218", 
+            "type" = "Missile"
+        }, 
+        "ClanLargePulseLsr" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "LargeLaser", 
+                "PulseLaser", 
+                "LargePulseLaser", 
+                "ClanLaser", 
+                "ClanLargeLaserFamily", 
+                "ClanLargeLaser", 
+                "ClanPulseLaser", 
+                "ClanLargePulseLsr", 
+                "SolarisRestricted"
+            ], 
+            "id" = "1216", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanLaserAntiMissileSystem" = {
+            "HardpointAliases" = [
+                "ClanAntiMissileSystem", 
+                "LaserAntiMissileSystem", 
+                "ClanLaserAntiMissileSystem"
+            ], 
+            "id" = "1254", 
+            "inheritId" = null, 
+            "type" = "AMS"
+        }, 
+        "ClanLightMachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LightMachineGun", 
+                "ClanMachineGun", 
+                "ClanLightMachineGun", 
+                ""
+            ], 
+            "id" = "1242", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanLightTAG" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "TAG", 
+                "ClanTAG", 
+                "LightTAG", 
+                "ClanLightTAG"
+            ], 
+            "id" = "1253", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanMachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "MachineGun", 
+                "ClanMachineGun", 
+                ""
+            ], 
+            "id" = "1209", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanMediumPulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "MediumLaser", 
+                "PulseLaser", 
+                "MediumPulseLaser", 
+                "ClanLaser", 
+                "ClanMediumLaserFamily", 
+                "ClanMediumLaser", 
+                "ClanPulseLaser", 
+                "ClanMediumPulseLaser"
+            ], 
+            "id" = "1215", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanMicroPulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "MicroLaser", 
+                "PulseLaser", 
+                "MicroPulseLaser", 
+                "ClanLaser", 
+                "ClanMicroLaserFamily", 
+                "ClanMicroLaser", 
+                "ClanPulseLaser", 
+                "ClanMicroPulseLaser"
+            ], 
+            "id" = "1245", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanNarcBeacon" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile1", 
+                "NarcBeacon", 
+                "ClanNarcBeacon"
+            ], 
+            "id" = "1235", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanSRM2" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile2", 
+                "SRM", 
+                "SRM2", 
+                "ClanSRM", 
+                "ClanSRM2"
+            ], 
+            "id" = "1226", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanSRM2_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile2", 
+                "SRM", 
+                "SRM2", 
+                "SRM_Artemis", 
+                "SRM2_Artemis", 
+                "ClanSRM", 
+                "ClanSRM2", 
+                "ClanSRM_Artemis", 
+                "ClanSRM2_Artemis"
+            ], 
+            "id" = "1229", 
+            "inheritId" = "1226", 
+            "type" = "Missile"
+        }, 
+        "ClanSRM4" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile4", 
+                "SRM", 
+                "SRM4", 
+                "ClanSRM", 
+                "ClanSRM4"
+            ], 
+            "id" = "1227", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanSRM4_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile4", 
+                "SRM", 
+                "SRM4", 
+                "SRM_Artemis", 
+                "SRM4_Artemis", 
+                "ClanSRM", 
+                "ClanSRM4", 
+                "ClanSRM_Artemis", 
+                "ClanSRM4_Artemis"
+            ], 
+            "id" = "1230", 
+            "inheritId" = "1227", 
+            "type" = "Missile"
+        }, 
+        "ClanSRM6" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "SRM", 
+                "SRM6", 
+                "ClanSRM", 
+                "ClanSRM6"
+            ], 
+            "id" = "1228", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanSRM6_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "SRM", 
+                "SRM6", 
+                "SRM_Artemis", 
+                "SRM6_Artemis", 
+                "ClanSRM", 
+                "ClanSRM6", 
+                "ClanSRM_Artemis", 
+                "ClanSRM6_Artemis"
+            ], 
+            "id" = "1231", 
+            "inheritId" = "1228", 
+            "type" = "Missile"
+        }, 
+        "ClanSmallPulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "SmallLaser", 
+                "PulseLaser", 
+                "SmallPulseLaser", 
+                "ClanLaser", 
+                "ClanSmallLaserFamily", 
+                "ClanSmallLaser", 
+                "ClanPulseLaser", 
+                "ClanSmallPulseLaser"
+            ], 
+            "id" = "1214", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanStreakSRM2" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile2", 
+                "StreakSRM", 
+                "StreakSRM2", 
+                "ClanStreakSRM", 
+                "ClanStreakSRM2"
+            ], 
+            "id" = "1232", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanStreakSRM4" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile4", 
+                "StreakSRM", 
+                "StreakSRM4", 
+                "ClanStreakSRM", 
+                "ClanStreakSRM4"
+            ], 
+            "id" = "1233", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanStreakSRM6" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "StreakSRM", 
+                "StreakSRM6", 
+                "ClanStreakSRM", 
+                "ClanStreakSRM6"
+            ], 
+            "id" = "1234", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "ClanTAG" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "TAG", 
+                "ClanTAG"
+            ], 
+            "id" = "1236", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ClanUltraAutoCannon10" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon10", 
+                "ClanUltraAutoCannon", 
+                "ClanUltraAutoCannon10"
+            ], 
+            "id" = "1206", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanUltraAutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon2", 
+                "ClanUltraAutoCannon", 
+                "ClanUltraAutoCannon2"
+            ], 
+            "id" = "1204", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanUltraAutoCannon20" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon20", 
+                "ClanUltraAutoCannon", 
+                "ClanUltraAutoCannon20"
+            ], 
+            "id" = "1207", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "ClanUltraAutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon5", 
+                "ClanUltraAutoCannon", 
+                "ClanUltraAutoCannon5"
+            ], 
+            "id" = "1205", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "DropShipLargePulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "LargeLaser", 
+                "PulseLaser", 
+                "LargePulseLaser", 
+                "ISLaser", 
+                "ISLargeLaserFamily", 
+                "ISPulseLaser", 
+                "ISLargePulseLaser"
+            ], 
+            "id" = "1998", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ERLargeLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "LargeLaser", 
+                "ERLaser", 
+                "ERLargeLaser", 
+                "ISLaser", 
+                "ISLargeLaserFamily", 
+                "ISERLaser", 
+                "ISERLargeLaser", 
+                "NonPulseLaser", 
+                "ISNonPulseLaser"
+            ], 
+            "id" = "1005", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ERMediumLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "ERLaser", 
+                "MediumLaser", 
+                "ISLaser", 
+                "ISERLaser", 
+                "ISMediumLaserFamily", 
+                "ISMediumLaser", 
+                "ISERMediumLaser", 
+                "NonPulseLaser", 
+                "ISNonPulseLaser"
+            ], 
+            "id" = "1046", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ERPPC" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "LargeWeapon", 
+                "PPC", 
+                "ERPPC", 
+                "ISPPC", 
+                "ISERPPC", 
+                "PPCFamily"
+            ], 
+            "id" = "1006", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "ERSmallLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "ERLaser", 
+                "SmallLaser", 
+                "ISLaser", 
+                "ISERLaser", 
+                "ISSmallLaserFamily", 
+                "ISSmallLaser", 
+                "ISERSmallLaser", 
+                "NonPulseLaser", 
+                "ISNonPulseLaser"
+            ], 
+            "id" = "1045", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "FakeMachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "MachineGun", 
+                "ISMachineGun"
+            ], 
+            "id" = "1999", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "Flamer" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Flamer", 
+                "ISFlamer"
+            ], 
+            "id" = "1007", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "GaussRifle" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "GaussRifle", 
+                "ISGaussRifle"
+            ], 
+            "id" = "1021", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "HeavyGaussRifle" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "ISGaussRifle", 
+                "HeavyGaussRifle", 
+                "ISHeavyGaussRifle"
+            ], 
+            "id" = "1057", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "HeavyMachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "ISMachineGun", 
+                "HeavyMachineGun", 
+                "ISHeavyMachineGun"
+            ], 
+            "id" = "1061", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "HeavyPPC" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "LargeWeapon", 
+                "HeavyPPC", 
+                "ISPPC", 
+                "ISHeavyPPC", 
+                "PPCFamily", 
+                "SolarisRestricted"
+            ], 
+            "id" = "1048", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "LBXAutoCannon10" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon10", 
+                "ISLBXAutoCannon", 
+                "ISLBXAutoCannon10"
+            ], 
+            "id" = "1023", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "LBXAutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon2", 
+                "ISLBXAutoCannon", 
+                "ISLBXAutoCannon2"
+            ], 
+            "id" = "1050", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "LBXAutoCannon20" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon20", 
+                "ISLBXAutoCannon", 
+                "ISLBXAutoCannon20"
+            ], 
+            "id" = "1052", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "LBXAutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "LBXAutoCannon", 
+                "LBXAutoCannon5", 
+                "ISLBXAutoCannon", 
+                "ISLBXAutoCannon5"
+            ], 
+            "id" = "1051", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "LRM10" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile10", 
+                "LRM", 
+                "LRM10", 
+                "ISLRM", 
+                "ISLRM10"
+            ], 
+            "id" = "1027", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "LRM10_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile10", 
+                "LRM", 
+                "LRM10", 
+                "LRM_Artemis", 
+                "LRM10_Artemis", 
+                "ISLRM", 
+                "ISLRM10", 
+                "ISLRM_Artemis", 
+                "ISLRM10_Artemis"
+            ], 
+            "id" = "1042", 
+            "inheritId" = "1027", 
+            "type" = "Missile"
+        }, 
+        "LRM15" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile15", 
+                "LRM", 
+                "LRM15", 
+                "ISLRM", 
+                "ISLRM15"
+            ], 
+            "id" = "1028", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "LRM15_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile15", 
+                "LRM", 
+                "LRM15", 
+                "LRM_Artemis", 
+                "LRM15_Artemis", 
+                "ISLRM", 
+                "ISLRM15", 
+                "ISLRM_Artemis", 
+                "ISLRM15_Artemis"
+            ], 
+            "id" = "1043", 
+            "inheritId" = "1028", 
+            "type" = "Missile"
+        }, 
+        "LRM20" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile20", 
+                "LRM", 
+                "LRM20", 
+                "ISLRM", 
+                "ISLRM20"
+            ], 
+            "id" = "1002", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "LRM20_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile20", 
+                "LRM", 
+                "LRM20", 
+                "LRM_Artemis", 
+                "LRM20_Artemis", 
+                "ISLRM", 
+                "ISLRM20", 
+                "ISLRM_Artemis", 
+                "ISLRM20_Artemis"
+            ], 
+            "id" = "1044", 
+            "inheritId" = "1002", 
+            "type" = "Missile"
+        }, 
+        "LRM5" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile5", 
+                "LRM", 
+                "LRM5", 
+                "ISLRM", 
+                "ISLRM5"
+            ], 
+            "id" = "1026", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "LRM5_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile5", 
+                "LRM", 
+                "LRM5", 
+                "LRM_Artemis", 
+                "LRM5_Artemis", 
+                "ISLRM", 
+                "ISLRM5", 
+                "ISLRM_Artemis", 
+                "ISLRM5_Artemis"
+            ], 
+            "id" = "1041", 
+            "inheritId" = "1026", 
+            "type" = "Missile"
+        }, 
+        "LargeLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "StdLaser", 
+                "LargeLaser", 
+                "ISLaser", 
+                "ISStdLaser", 
+                "ISLargeLaserFamily", 
+                "ISLargeLaser", 
+                "NonPulseLaser", 
+                "ISNonPulseLaser"
+            ], 
+            "id" = "1008", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "LargePulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "LargeLaser", 
+                "PulseLaser", 
+                "LargePulseLaser", 
+                "ISLaser", 
+                "ISLargeLaserFamily", 
+                "ISPulseLaser", 
+                "ISLargePulseLaser"
+            ], 
+            "id" = "1010", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "LaserAntiMissileSystem" = {
+            "HardpointAliases" = [
+                "ISAntiMissileSystem", 
+                "LaserAntiMissileSystem", 
+                "ISLaserAntiMissileSystem"
+            ], 
+            "id" = "1071", 
+            "inheritId" = null, 
+            "type" = "AMS"
+        }, 
+        "LightGaussRifle" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "ISGaussRifle", 
+                "LightGaussRifle", 
+                "ISLightGaussRifle"
+            ], 
+            "id" = "1056", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "LightMachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "ISMachineGun", 
+                "LightMachineGun", 
+                "ISLightMachineGun"
+            ], 
+            "id" = "1060", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "LightPPC" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "LargeWeapon", 
+                "LightPPC", 
+                "ISPPC", 
+                "ISLightPPC", 
+                "PPCFamily"
+            ], 
+            "id" = "1047", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "MRM10" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile10", 
+                "MRM", 
+                "MRM10", 
+                "ISMRM", 
+                "ISMRM10"
+            ], 
+            "id" = "1064", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "MRM20" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile20", 
+                "MRM", 
+                "MRM20", 
+                "ISMRM", 
+                "ISMRM20"
+            ], 
+            "id" = "1065", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "MRM30" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile30", 
+                "MRM", 
+                "MRM30", 
+                "ISMRM", 
+                "ISMRM30"
+            ], 
+            "id" = "1066", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "MRM40" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile40", 
+                "MRM", 
+                "MRM40", 
+                "ISMRM", 
+                "ISMRM40"
+            ], 
+            "id" = "1067", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "MachineGun" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "MachineGun", 
+                "ISMachineGun"
+            ], 
+            "id" = "1024", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "MediumLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "StdLaser", 
+                "MediumLaser", 
+                "ISLaser", 
+                "ISStdLaser", 
+                "ISMediumLaserFamily", 
+                "ISMediumLaser", 
+                "NonPulseLaser", 
+                "ISNonPulseLaser"
+            ], 
+            "id" = "1001", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "MediumPulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "MediumLaser", 
+                "PulseLaser", 
+                "MediumPulseLaser", 
+                "ISLaser", 
+                "ISMediumLaserFamily", 
+                "ISPulseLaser", 
+                "ISMediumPulseLaser"
+            ], 
+            "id" = "1011", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "NarcBeacon" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile1", 
+                "NarcBeacon", 
+                "ISNarcBeacon"
+            ], 
+            "id" = "1029", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "PPC" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "LargeWeapon", 
+                "PPC", 
+                "ISPPC", 
+                "ISStandardPPC", 
+                "PPCFamily"
+            ], 
+            "id" = "1009", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "RocketLauncher10" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "RocketLauncher", 
+                "RocketLauncher10", 
+                "RL", 
+                "RL10", 
+                "ISRL", 
+                "ISRL10"
+            ], 
+            "id" = "1068", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "RocketLauncher15" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "RocketLauncher", 
+                "RocketLauncher15", 
+                "RL", 
+                "RL15", 
+                "ISRL", 
+                "ISRL15"
+            ], 
+            "id" = "1069", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "RocketLauncher20" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "RocketLauncher", 
+                "RocketLauncher20", 
+                "RL", 
+                "RL20", 
+                "ISRL", 
+                "ISRL20"
+            ], 
+            "id" = "1070", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "RotaryAutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "RotaryAutoCannon", 
+                "RotaryAutoCannon2", 
+                "ISRotaryAutoCannon", 
+                "ISRotaryAutoCannon2"
+            ], 
+            "id" = "1058", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "RotaryAutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "RotaryAutoCannon", 
+                "RotaryAutoCannon5", 
+                "ISRotaryAutoCannon", 
+                "ISRotaryAutoCannon5"
+            ], 
+            "id" = "1059", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "SRM2" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile2", 
+                "SRM", 
+                "SRM2", 
+                "ISSRM", 
+                "ISSRM2"
+            ], 
+            "id" = "1030", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "SRM2_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile2", 
+                "SRM", 
+                "SRM2", 
+                "SRM_Artemis", 
+                "SRM2_Artemis", 
+                "ISSRM", 
+                "ISSRM2", 
+                "ISSRM_Artemis", 
+                "ISSRM2_Artemis"
+            ], 
+            "id" = "1038", 
+            "inheritId" = "1030", 
+            "type" = "Missile"
+        }, 
+        "SRM4" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile4", 
+                "SRM", 
+                "SRM4", 
+                "ISSRM", 
+                "ISSRM4"
+            ], 
+            "id" = "1004", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "SRM4_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile4", 
+                "SRM", 
+                "SRM4", 
+                "SRM_Artemis", 
+                "SRM4_Artemis", 
+                "ISSRM", 
+                "ISSRM4", 
+                "ISSRM_Artemis", 
+                "ISSRM4_Artemis"
+            ], 
+            "id" = "1039", 
+            "inheritId" = "1004", 
+            "type" = "Missile"
+        }, 
+        "SRM6" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "SRM", 
+                "SRM6", 
+                "ISSRM", 
+                "ISSRM6"
+            ], 
+            "id" = "1031", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "SRM6_Artemis" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "SRM", 
+                "SRM6", 
+                "SRM_Artemis", 
+                "SRM6_Artemis", 
+                "ISSRM", 
+                "ISSRM6", 
+                "ISSRM_Artemis", 
+                "ISSRM6_Artemis"
+            ], 
+            "id" = "1040", 
+            "inheritId" = "1031", 
+            "type" = "Missile"
+        }, 
+        "SmallLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "StdLaser", 
+                "SmallLaser", 
+                "ISLaser", 
+                "ISStdLaser", 
+                "ISSmallLaserFamily", 
+                "ISSmallLaser", 
+                "NonPulseLaser", 
+                "ISNonPulseLaser"
+            ], 
+            "id" = "1003", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "SmallPulseLaser" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "SmallLaser", 
+                "PulseLaser", 
+                "SmallPulseLaser", 
+                "ISLaser", 
+                "ISSmallLaserFamily", 
+                "ISPulseLaser", 
+                "ISSmallPulseLaser"
+            ], 
+            "id" = "1012", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "SnubNosePPC" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "LargeWeapon", 
+                "SnubNosePPC", 
+                "ISPPC", 
+                "ISSnubNosePPC", 
+                "PPCFamily"
+            ], 
+            "id" = "1049", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "StreakSRM2" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile2", 
+                "StreakSRM", 
+                "StreakSRM2", 
+                "ISStreakSRM", 
+                "ISStreakSRM2"
+            ], 
+            "id" = "1032", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "StreakSRM4" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile4", 
+                "StreakSRM", 
+                "StreakSRM4", 
+                "ISStreakSRM", 
+                "ISStreakSRM4"
+            ], 
+            "id" = "1062", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "StreakSRM6" = {
+            "HardpointAliases" = [
+                "Missile", 
+                "Missile6", 
+                "StreakSRM", 
+                "StreakSRM6", 
+                "ISStreakSRM", 
+                "ISStreakSRM6"
+            ], 
+            "id" = "1063", 
+            "inheritId" = null, 
+            "type" = "Missile"
+        }, 
+        "TAG" = {
+            "HardpointAliases" = [
+                "Energy", 
+                "Laser", 
+                "TAG", 
+                "ISLaser", 
+                "ISTAG"
+            ], 
+            "id" = "1037", 
+            "inheritId" = null, 
+            "type" = "Energy"
+        }, 
+        "UltraAutoCannon10" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon10", 
+                "ISUltraAutoCannon", 
+                "ISUltraAutoCannon10"
+            ], 
+            "id" = "1054", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "UltraAutoCannon2" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon2", 
+                "ISUltraAutoCannon", 
+                "ISUltraAutoCannon2"
+            ], 
+            "id" = "1053", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "UltraAutoCannon20" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon20", 
+                "ISUltraAutoCannon", 
+                "ISUltraAutoCannon20"
+            ], 
+            "id" = "1055", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }, 
+        "UltraAutoCannon5" = {
+            "HardpointAliases" = [
+                "Ballistic", 
+                "LargeWeapon", 
+                "UltraAutoCannon", 
+                "UltraAutoCannon5", 
+                "ISUltraAutoCannon", 
+                "ISUltraAutoCannon5"
+            ], 
+            "id" = "1025", 
+            "inheritId" = null, 
+            "type" = "Ballistic"
+        }
     }
 }

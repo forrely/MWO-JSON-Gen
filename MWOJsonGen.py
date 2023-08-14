@@ -1,16 +1,14 @@
-from email.policy import default
 import os
 import shutil
-from tkinter import E
 import zipfile
 import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-#from lxml import lET
-import re
 
 gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
-Weapons  = {}
+
+Weapons = {}
+GameVersion = "unknown"
 
 class CommentedTreeBuilder(ET.TreeBuilder):
     def comment(self, data):
@@ -49,12 +47,15 @@ def read_and_convert_weapons(weapon_path):
 	tree = ET.parse(file)
 	root = tree.getroot()
 
-	weapons = {} #defaultdict(dict)
+	weapons = {
+		"_GameVersion": GameVersion,
+		"weapons": {}
+		} #defaultdict(dict)
 	for wElement in root.iter("Weapon"):
 		inheritId = wElement.get("InheritFrom")
 		#t_ =  wElement.find("WeaponStats").get("type") if inheritId == None else 
 			
-		weapons[wElement.get("name")] = {
+		weapons["weapons"][wElement.get("name")] = {
 			"id": wElement.get("id"),
 			"HardpointAliases": wElement.get("HardpointAliases").split(","),
 			"type": wElement.find("WeaponStats").get("type") if inheritId is None else "",
@@ -62,9 +63,9 @@ def read_and_convert_weapons(weapon_path):
 		}
 	
 	#propagate inherited stats
-	for w in weapons.values():
+	for w in weapons["weapons"].values():
 		if w["inheritId"] is not None:
-			for parent_w in weapons.values():
+			for parent_w in weapons["weapons"].values():
 				if parent_w["id"] == w["inheritId"]:
 					w["type"] = parent_w["type"]
 
@@ -86,6 +87,7 @@ def read_and_convert_mechpaks(mech_dir):
 	print("The source directory is:", mech_dir)
 
 	data = {
+		"_GameVersion": GameVersion,
 		"mechs": defaultdict(dict)
 	}
 
@@ -93,7 +95,7 @@ def read_and_convert_mechpaks(mech_dir):
 	
 	# Create list of hardpoint aliases to determine component hardpoint list
 	HardpointTypeAliases = defaultdict(dict)
-	for w in Weapons.values():
+	for w in Weapons["weapons"].values():
 		if w["type"] in HardpointTypeAliases:
 			HardpointTypeAliases[w["type"]].update(w["HardpointAliases"]) 
 		else:
@@ -255,8 +257,19 @@ def read_and_convert_mechpaks(mech_dir):
 		json.dump(data, f, indent=4, separators=(", ", " = "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
 
+def readVersion(source_file):
+	print("reading version...", source_file)
+	file = open(source_file, "r")
+	data = file.read()
+	tree = ET.XML(data.replace('ï»¿', ''))
+	#root = tree.getroot()
+	
+	global GameVersion
+	GameVersion = tree.find("BuildVersion").text
+
 if __name__ == "__main__":
 	#source_dir = os.getcwd()
-  	#copy_mdf_and_xml_files(source_dir)
+	#copy_mdf_and_xml_files(source_dir)
+	readVersion(os.path.join(gamePath, "build_info.xml"))
 	read_and_convert_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Weapons\Weapons.xml"))
 	read_and_convert_mechpaks(os.path.join(gamePath, "Game\mechs"))
