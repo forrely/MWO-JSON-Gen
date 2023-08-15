@@ -284,6 +284,7 @@ def read_and_convert_mechpaks(mech_dir):
 	weaponquirkset = set()
 	weaponAliases = set()
 	qEffects = set()
+	quirks =  defaultdict(dict)
 
 	for w in Weapons["weapons"]:
 		for a in Weapons["weapons"][w]["HardpointAliases"]:
@@ -291,27 +292,46 @@ def read_and_convert_mechpaks(mech_dir):
 
 	
 	for q in quirkSet:
+		
+		quirks[q] = { "MatchesWeapons": list() }
+		matched = False
 		words = q.split("_")
 		if words[0] is not None:
-			if(words[0] == "ammocapacity"):
+			if matched is False and words[0] == "ammocapacity":
+				matched == True
 				qEffects.add("ammocapacity")
 				weaponquirkset.add(q)
 				quirklist.remove(q)
-				continue
+			else:
+				if matched is False:
+					if words[0] == "all":
+						quirks[q]["MatchesWeapons"].append("all")
+					else:
+						for w in Weapons["weapons"]:
+							for a in Weapons["weapons"][w]["HardpointAliases"]:
+								if words[0].lower() == a.lower():
+									quirks[q]["MatchesWeapons"].append(w)
 
-			for a in weaponAliases:
-				if words[0].lower() == a.lower() or words[0] == "all":
-					qEffects.add(words[1])
-					weaponquirkset.add(q)
-					quirklist.remove(q)
-					continue
-			
-			qEffects.add(str.join( words[0:words.len()] ))
+					for a in weaponAliases:
+						if words[0].lower() == a.lower() or words[0] == "all":
+							matched = True
+							qEffects.add(words[1])
+							weaponquirkset.add(q)
+							quirklist.remove(q)
+							break
+			if matched is False:
+				qEffects.add("_".join( words[0:(len(words)-1)] ))
+				matched = True
+				#quirks[q]["MatchesWeapons"].append("none")
 
 	weaponquirklist = list(weaponquirkset)
 	weaponquirklist.sort()
+	qe = list(qEffects)
+	qe.sort()
 	quirkData["nonweaponquirkList"] = quirklist
 	quirkData["weaponQuirkList"] = weaponquirklist
+	quirkData["effects"] = qe
+	quirkData["quirks"] = quirks
 	with open('Quirks.json', 'w') as f:
 		json.dump(quirkData, f, indent=4, separators=(",", ": "), sort_keys=True)
 
