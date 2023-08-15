@@ -72,7 +72,7 @@ def read_and_convert_weapons(weapon_path):
 	
 	print("writing json:\n")
 	with open('Weapons.json', 'w') as f:
-		json.dump(weapons, f, indent=4, separators=(", ", " = "), sort_keys=True)					
+		json.dump(weapons, f, indent=4, separators=(",", ": "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
 	
 	global Weapons
