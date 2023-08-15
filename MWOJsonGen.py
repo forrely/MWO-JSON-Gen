@@ -91,6 +91,20 @@ def read_and_convert_mechpaks(mech_dir):
 		"mechs": defaultdict(dict)
 	}
 
+	quirkData = {
+		"_GameVersion": GameVersion,
+		"quirks": defaultdict(dict),
+			# name 
+			#	- aliases (flat list)
+			#	- min, max, median, average (per IS/clan?)
+		"quirkAliases": defaultdict(dict)
+			# name
+			# 	- hierarchy?
+			# 	- aliases
+			#
+	}
+	quirkSet = set()
+
 	mechs = defaultdict(dict)
 	
 	# Create list of hardpoint aliases to determine component hardpoint list
@@ -136,6 +150,7 @@ def read_and_convert_mechpaks(mech_dir):
 							for q in root.iter('Quirk'):
 								if q.get("name").find("rear") == -1:
 									quirks[q.get("name")] = float(q.get("value"))
+									quirkSet.add(q.get("name"))
 
 							#print(quirks)
 
@@ -164,6 +179,8 @@ def read_and_convert_mechpaks(mech_dir):
 								#print(setName.upper())
 								#for v in data["mechs"][mech_name]["variants"]:
 									#print(setName.upper() == v)
+
+								# *** Set Bonuses ***
 								data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"] = defaultdict(dict)
 								for setBonus in s.iter("Bonus"):
 									count = setBonus.get("PieceCount")
@@ -171,14 +188,17 @@ def read_and_convert_mechpaks(mech_dir):
 									for q in setBonus.iter('Quirk'):
 										if q.get("name").find("rear") == -1:
 											quirks[q.get("name")] = float(q.get("value"))
+											quirkSet.add(q.get("name"))
 									#omniComponents[setName]["SetBonuses"][count] = quirks
 									data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"][count] = quirks
 
+								# *** Omnipod Component Bonuses ***
 								for component in s.iter("component"):
 									quirks = {}
 									hardpointIds = []
 									for q in component.iter('Quirk'):
 										quirks[q.get("name")] = float(q.get("value"))
+										quirkSet.add(q.get("name"))
 									for h in component.iter("Hardpoint"):
 										hardpointIds.append(int(h.get("ID")))
 
@@ -256,6 +276,44 @@ def read_and_convert_mechpaks(mech_dir):
 	with open('Mechs.json', 'w') as f:
 		json.dump(data, f, indent=4, separators=(",", ": "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
+	
+
+
+	quirklist = list(quirkSet)
+	quirklist.sort()
+	weaponquirkset = set()
+	weaponAliases = set()
+	qEffects = set()
+
+	for w in Weapons["weapons"]:
+		for a in Weapons["weapons"][w]["HardpointAliases"]:
+			weaponAliases.add(a)
+
+	
+	for q in quirkSet:
+		words = q.split("_")
+		if words[0] is not None:
+			if(words[0] == "ammocapacity"):
+				qEffects.add("ammocapacity")
+				weaponquirkset.add(q)
+				quirklist.remove(q)
+				continue
+
+			for a in weaponAliases:
+				if words[0].lower() == a.lower() or words[0] == "all":
+					qEffects.add(words[1])
+					weaponquirkset.add(q)
+					quirklist.remove(q)
+					continue
+			
+			qEffects.add(str.join( words[0:words.len()] ))
+
+	weaponquirklist = list(weaponquirkset)
+	weaponquirklist.sort()
+	quirkData["nonweaponquirkList"] = quirklist
+	quirkData["weaponQuirkList"] = weaponquirklist
+	with open('Quirks.json', 'w') as f:
+		json.dump(quirkData, f, indent=4, separators=(",", ": "), sort_keys=True)
 
 def readVersion(source_file):
 	print("reading version...", source_file)
