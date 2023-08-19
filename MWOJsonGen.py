@@ -7,8 +7,11 @@ from collections import defaultdict
 
 gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
 
-Weapons = {}
 GameVersion = "unknown"
+Weapons = {}
+MechIDs = {}
+OmnipodIDs = {}
+
 
 class CommentedTreeBuilder(ET.TreeBuilder):
     def comment(self, data):
@@ -41,6 +44,18 @@ def copy_mdf_and_xml_files(source_dir):
 					with source, target:
 						shutil.copyfileobj(source, target)
 
+def convert_weapon_xml_to_json(wElement):
+	inheritId = wElement.get("InheritFrom")
+	weapon = {
+		"id": wElement.get("id"),
+		"HardpointAliases": wElement.get("HardpointAliases").split(","),
+		"type": wElement.find("WeaponStats").get("type") if inheritId is None else "",
+		"inheritId": inheritId,
+		"faction": wElement.get("faction"),
+		"WeaponStats": wElement.attrib
+	}
+	return weapon
+
 def read_and_convert_weapons(weapon_path):
 	print("reading weapons: ", weapon_path)
 	file = open(weapon_path, "r")
@@ -52,22 +67,34 @@ def read_and_convert_weapons(weapon_path):
 		"weapons": {}
 		} #defaultdict(dict)
 	for wElement in root.iter("Weapon"):
-		inheritId = wElement.get("InheritFrom")
+		inheritFrom = wElement.get("InheritFrom")
 		#t_ =  wElement.find("WeaponStats").get("type") if inheritId == None else 
-			
-		weapons["weapons"][wElement.get("name")] = {
-			"id": wElement.get("id"),
+
+		weapons["weapons"][wElement.get("name")] = wElement.attrib	
+		# weapons["weapons"][wElement.get("name")] = {
+		# 	"id": wElement.get("id"),
+		# 	"HardpointAliases": wElement.get("HardpointAliases").split(","),
+		# 	#"type": wElement.find("WeaponStats").get("type") if inheritId is None else "",
+		# 	"inheritId": inheritId,
+		# 	"faction": wElement.get("faction"),
+		# 	"WeaponStats": wElement.find("WeaponStats").attrib,
+		# 	"Loc": wElement.find("Loc").attrib
+		# }
+		
+		weapons["weapons"][wElement.get("name")].update({
 			"HardpointAliases": wElement.get("HardpointAliases").split(","),
-			"type": wElement.find("WeaponStats").get("type") if inheritId is None else "",
-			"inheritId": inheritId
-		}
+			"WeaponStats": wElement.find("WeaponStats").attrib if inheritFrom is None else None,
+			"Loc": wElement.find("Loc").attrib
+		})
 	
 	#propagate inherited stats
 	for w in weapons["weapons"].values():
-		if w["inheritId"] is not None:
+		if "InheritFrom" in w and w["InheritFrom"] is not None:
 			for parent_w in weapons["weapons"].values():
-				if parent_w["id"] == w["inheritId"]:
-					w["type"] = parent_w["type"]
+				if parent_w["id"] == w["InheritFrom"]:
+					#w["type"] = parent_w["type"]
+					w["WeaponStats"] = parent_w["WeaponStats"]
+
 
 	
 	print("writing json:\n")
@@ -78,7 +105,59 @@ def read_and_convert_weapons(weapon_path):
 	global Weapons
 	Weapons = weapons
 
+def read_mech_ids(mech_item_path):
+	print("reading mech ids...")
+	print("The source directory is:", mech_item_path)
 
+	data = {
+		"_GameVersion": GameVersion,
+		"variants": defaultdict(dict),
+		"chassis": defaultdict(dict)
+	}
+	
+	file = open(mech_item_path, "r")
+	tree = ET.parse(file)
+	root = tree.getroot()
+	#data["mechs"][mech_name] = { "Variants": {}}
+
+	# iterate through variants
+	for v in root.iter("Mech"):
+		data["variants"][v.get("name").upper()] = {
+			"id": v.get("id"),
+			"faction": v.get("faction"),
+			"chassis": v.get("chassis"),
+		}
+		#if v.get("name") in data["mechs"][v.get("chassis")]
+		data["chassis"][v.get("chassis")]["faction"] = v.get("faction")
+
+
+	#print("writing mech id json:\n")
+	#with open('Weapons.json', 'w') as f:
+	#	json.dump(weapons, f, indent=4, separators=(",", ": "), sort_keys=True)	
+	global MechIDs
+	MechIDs = data
+
+def read_omnipod_ids(omnipod_item_path):
+	print("reading mech ids...")
+	print("The source directory is:", omnipod_item_path)
+
+	data = {
+		"_GameVersion": GameVersion,
+		"Variants": defaultdict(dict)
+	}
+	
+	file = open(omnipod_item_path, "r")
+	tree = ET.parse(file)
+	root = tree.getroot()
+
+	# iterate through variants
+	for v in root.iter("OmniPod"):
+		if v.get("set").upper() not in data["Variants"]:
+			data["Variants"][v.get("set").upper()] = defaultdict(dict)
+		data["Variants"][v.get("set").upper()][v.get("component")] = v.get("id")
+
+	global OmnipodIDs
+	OmnipodIDs = data
 
 
 
@@ -110,21 +189,28 @@ def read_and_convert_mechpaks(mech_dir):
 	# Create list of hardpoint aliases to determine component hardpoint list
 	HardpointTypeAliases = defaultdict(dict)
 	for w in Weapons["weapons"].values():
-		if w["type"] in HardpointTypeAliases:
-			HardpointTypeAliases[w["type"]].update(w["HardpointAliases"]) 
+		weaponType = w["WeaponStats"]["type"]
+		if weaponType in HardpointTypeAliases:
+			HardpointTypeAliases[weaponType].update(w["HardpointAliases"]) 
 		else:
-			HardpointTypeAliases[w["type"]] = set(w["HardpointAliases"])
+			HardpointTypeAliases[weaponType] = set(w["HardpointAliases"])
 	for ht in HardpointTypeAliases:
 		HardpointTypeAliases[ht].update([ht])
 
 	for file in os.listdir(mech_dir):
 		if file.endswith(".pak"):
-			mech_name = os.path.basename(file[:-4])
+			mech_name = os.path.basename(file[:-4]).lower()
 			
 			fullrun = True or mech_name[0] == 'a'
 			if fullrun:
 				print("Found a zipped file:", mech_name)
-				data["mechs"][mech_name] = { "Variants": {}}
+				
+				if(mech_name in MechIDs["chassis"]):
+					data["mechs"][mech_name] = { "Variants": {}}
+					data["mechs"][mech_name]["faction"] = MechIDs["chassis"][mech_name]["faction"]
+				else:
+					print("warning, mech not found in id list: "+ mech_name)
+					continue	
 				with zipfile.ZipFile(os.path.join(mech_dir, file), "r") as zip_ref:
 					for member in zip_ref.namelist():
 						if member.endswith(".mdf"):
@@ -137,13 +223,33 @@ def read_and_convert_mechpaks(mech_dir):
 							#print(tree)
 							root = tree.getroot()
 							baseStats = root.find("Mech").attrib
+							baseStats["faction"] = MechIDs["variants"][mechvariant]["faction"]
+							baseStats["id"] = MechIDs["variants"][mechvariant]["id"]
+							baseStats["BaseTons"] = float(baseStats["BaseTons"])
+							baseStats["MaxEngineRating"] = int(baseStats["MaxEngineRating"])
+							baseStats["MaxJumpJets"] = int(baseStats["MaxJumpJets"])
+							baseStats["MaxTons"] = float(baseStats["MaxTons"])
+							baseStats["MinEngineRating"] = int(baseStats["MinEngineRating"])
+							
+
+							weightLimits = {"Light":[0,35], "Medium": [36,55], "Heavy": [56,75], "Assault": [76,100]}
+							for className in weightLimits:
+								if baseStats["MaxTons"] >= weightLimits[className][0] and baseStats["MaxTons"] <= weightLimits[className][1]:
+									baseStats["class"] = className
+							
 							#print(baseStats)
 							components = {}
 							for c in root.iter("Component"):
-								components[c.get("Name")] = {}
-								components[c.get("Name")]["HardpointIds"] = []
+								cname = c.get("Name")
+								components[cname] = {}
+								components[cname]["HardpointIds"] = []
 								for h in c.iter("Hardpoint"):
-									components[c.get("Name")]["HardpointIds"].append(int(h.get("ID")))
+									components[cname]["HardpointIds"].append(int(h.get("ID")))
+
+								if mechvariant in OmnipodIDs["Variants"] and cname in OmnipodIDs["Variants"][mechvariant]:
+									components[cname]["OmnipodID"] = OmnipodIDs["Variants"][mechvariant][cname]
+								else:
+									components[cname]["OmnipodID"] = ""
 								#also get internal and fixed items (and slots?)
 							#print(components)
 							quirks = {}
@@ -152,11 +258,7 @@ def read_and_convert_mechpaks(mech_dir):
 									quirks[q.get("name")] = float(q.get("value"))
 									quirkSet.add(q.get("name"))
 
-							#print(quirks)
-
-							#for child in root:
-							#	mechs[mech_name]["variants"][mechvariant][child.tag] = child.attrib
-							variant["Mech"] = baseStats
+							variant["Stats"] = baseStats
 							variant["ComponentList"] = components
 							variant["QuirkList"] = quirks
 							if baseStats["Variant"] == "ADR-A":
@@ -173,6 +275,7 @@ def read_and_convert_mechpaks(mech_dir):
 							omniComponents = defaultdict(dict)							
 							for s in root.iter("Set"):
 								setName = s.get("name")
+								data["mechs"][mech_name]["Variants"][setName.upper()]["isOmniMech"] = True
 								omniComponents[setName]["SetBonuses"] = defaultdict(dict)
 								#print("testing: ")
 								#print(data["mechs"][mech_name])
@@ -350,4 +453,6 @@ if __name__ == "__main__":
 	#copy_mdf_and_xml_files(source_dir)
 	readVersion(os.path.join(gamePath, "build_info.xml"))
 	read_and_convert_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Weapons\Weapons.xml"))
+	read_mech_ids(os.path.join(gamePath, "Game\GameData\Libs\Items\Mechs\Mechs.xml"))
+	read_omnipod_ids(os.path.join(gamePath, "Game\GameData\Libs\Items\OmniPods.xml"))
 	read_and_convert_mechpaks(os.path.join(gamePath, "Game\mechs"))
