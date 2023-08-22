@@ -100,6 +100,8 @@ def read_and_convert_weapons(weapon_path):
 	for w in weapons["weapons"].values():
 		if "ammoType" in w["WeaponStats"]:
 			w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = w["WeaponStats"]["ammoType"].lower().replace("acammo", "").replace("ammo", "").replace("clan", "c").replace("-","")
+			if "hyperassaultgauss" in w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"]:
+				w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = "chag40"
 		else:
 			w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = ""
 
