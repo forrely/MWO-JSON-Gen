@@ -137,8 +137,9 @@ def load_ammo_data_to_weapons(ammo_path):
 	data = defaultdict(dict)
 
 	for aElement in root.iter("Module"):
-		stats = aElement.find("AmmoTypeStats")
-		data[stats.get("type")] = int(stats.get("numShots"))*2
+		if("Half" not in aElement.get("name")):
+			stats = aElement.find("AmmoTypeStats")
+			data[stats.get("type")] = int(stats.get("numShots"))
 
 	global Weapons
 	for w in Weapons["weapons"]:
