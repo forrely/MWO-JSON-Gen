@@ -5,6 +5,7 @@ import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
+
 gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
 
 GameVersion = "unknown"
@@ -44,7 +45,7 @@ def copy_mdf_and_xml_files(source_dir):
 					with source, target:
 						shutil.copyfileobj(source, target)
 
-def convert_weapon_xml_to_json(wElement):
+def weapon_xml_element_to_json(wElement):
 	inheritId = wElement.get("InheritFrom")
 	weapon = {
 		"id": wElement.get("id"),
@@ -94,16 +95,57 @@ def read_and_convert_weapons(weapon_path):
 				if parent_w["id"] == w["InheritFrom"]:
 					#w["type"] = parent_w["type"]
 					w["WeaponStats"] = parent_w["WeaponStats"]
-
-
 	
-	print("writing json:\n")
-	with open('Weapons.json', 'w') as f:
-		json.dump(weapons, f, indent=4, separators=(",", ": "), sort_keys=True)					
-		#destination_dir = os.path.join(source_dir, mech_name)
+	for w in weapons["weapons"].values():
+		if "ammoType" in w["WeaponStats"]:
+			w["WeaponStats"]["ammoQuirkShortId"] = w["WeaponStats"]["ammoType"].lower().replace("acammo", "").replace("ammo", "").replace("clan", "c").replace("-","").replace(" ", "_")
+		else:
+			w["WeaponStats"]["ammoQuirkShortId"] = ""
+
 	
 	global Weapons
 	Weapons = weapons
+	load_ammo_data_to_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Modules\Ammo.xml"))
+
+	print("writing json:\n")
+	with open('Weapons.json', 'w') as f:
+		json.dump(weapons, f, indent=4, separators=(",", ": "), sort_keys=True)	
+
+	write_modded_json_csv(weapons, "weapons.moddedjson.txt")
+	
+		#destination_dir = os.path.join(source_dir, mech_name)
+	
+def write_modded_json_csv(js, filename):
+	output = convert_json_to_csv(json.dumps(js, indent=4, separators=(",", ": "), sort_keys=True))
+	text_file = open(filename, "w")
+	text_file.write(output)
+	text_file.close()
+	
+def convert_json_to_csv(js):
+	output = ""
+	for line in js.splitlines():
+		output += "\""+line.replace("\"", "`")+"\"\n"
+	return output
+
+def load_ammo_data_to_weapons(ammo_path):
+	print("reading ammo: ", ammo_path)
+	file = open(ammo_path, "r")
+	tree = ET.parse(file)
+	root = tree.getroot()
+
+	data = defaultdict(dict)
+
+	for aElement in root.iter("Module"):
+		stats = aElement.find("AmmoTypeStats")
+		data[stats.get("type")] = stats.get("numShots")
+
+	global Weapons
+	for w in Weapons["weapons"]:
+		if "ammoType" in Weapons["weapons"][w]["WeaponStats"]:
+			Weapons["weapons"][w]["WeaponStats"]["shotsPerTon"] = data[ Weapons["weapons"][w]["WeaponStats"]["ammoType"] ]
+		else:
+			Weapons["weapons"][w]["WeaponStats"]["shotsPerTon"] = ""
+
 
 def read_mech_ids(mech_item_path):
 	print("reading mech ids...")
@@ -161,7 +203,7 @@ def read_omnipod_ids(omnipod_item_path):
 
 
 
-def read_and_convert_mechpaks(mech_dir):
+def read_and_convert_mech_and_quirks(mech_dir):
 	print("reading...")
 	print("The source directory is:", mech_dir)
 
@@ -379,6 +421,8 @@ def read_and_convert_mechpaks(mech_dir):
 	with open('Mechs.json', 'w') as f:
 		json.dump(data, f, indent=4, separators=(",", ": "), sort_keys=True)					
 		#destination_dir = os.path.join(source_dir, mech_name)
+
+	write_modded_json_csv(data, "mechs.moddedjson.txt")
 	
 
 
@@ -437,6 +481,8 @@ def read_and_convert_mechpaks(mech_dir):
 	quirkData["quirks"] = quirks
 	with open('Quirks.json', 'w') as f:
 		json.dump(quirkData, f, indent=4, separators=(",", ": "), sort_keys=True)
+	
+	write_modded_json_csv(quirkData, "quirks.moddedjson.txt")
 
 def readVersion(source_file):
 	print("reading version...", source_file)
@@ -455,4 +501,4 @@ if __name__ == "__main__":
 	read_and_convert_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Weapons\Weapons.xml"))
 	read_mech_ids(os.path.join(gamePath, "Game\GameData\Libs\Items\Mechs\Mechs.xml"))
 	read_omnipod_ids(os.path.join(gamePath, "Game\GameData\Libs\Items\OmniPods.xml"))
-	read_and_convert_mechpaks(os.path.join(gamePath, "Game\mechs"))
+	read_and_convert_mech_and_quirks(os.path.join(gamePath, "Game\mechs")) #reads possible quirks from mech data
