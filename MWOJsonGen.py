@@ -1,3 +1,4 @@
+
 import os
 import shutil
 import zipfile
@@ -98,9 +99,9 @@ def read_and_convert_weapons(weapon_path):
 	
 	for w in weapons["weapons"].values():
 		if "ammoType" in w["WeaponStats"]:
-			w["WeaponStats"]["ammoQuirkShortId"] = w["WeaponStats"]["ammoType"].lower().replace("acammo", "").replace("ammo", "").replace("clan", "c").replace("-","").replace(" ", "_")
+			w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = w["WeaponStats"]["ammoType"].lower().replace("acammo", "").replace("ammo", "").replace("clan", "c").replace("-","")
 		else:
-			w["WeaponStats"]["ammoQuirkShortId"] = ""
+			w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = ""
 
 	
 	global Weapons
@@ -137,14 +138,14 @@ def load_ammo_data_to_weapons(ammo_path):
 
 	for aElement in root.iter("Module"):
 		stats = aElement.find("AmmoTypeStats")
-		data[stats.get("type")] = stats.get("numShots")
+		data[stats.get("type")] = int(stats.get("numShots"))*2
 
 	global Weapons
 	for w in Weapons["weapons"]:
 		if "ammoType" in Weapons["weapons"][w]["WeaponStats"]:
-			Weapons["weapons"][w]["WeaponStats"]["shotsPerTon"] = data[ Weapons["weapons"][w]["WeaponStats"]["ammoType"] ]
+			Weapons["weapons"][w]["WeaponStats"]["ammoPerTon"] =  data[ Weapons["weapons"][w]["WeaponStats"]["ammoType"] ]
 		else:
-			Weapons["weapons"][w]["WeaponStats"]["shotsPerTon"] = ""
+			Weapons["weapons"][w]["WeaponStats"]["ammoPerTon"] = ""
 
 
 def read_mech_ids(mech_item_path):
@@ -470,6 +471,25 @@ def read_and_convert_mech_and_quirks(mech_dir):
 				qEffects.add("_".join( words[0:(len(words)-1)] ))
 				matched = True
 				#quirks[q]["MatchesWeapons"].append("none")
+
+	for w in Weapons["weapons"]:
+		shortId = Weapons["weapons"][w]["WeaponStats"]["ammoQuirkShortIdNoUnderscore"]
+		if shortId != "":
+			matchFound = False
+			for q in quirks:
+				if q.replace("ammocapacity", "").replace("additive", "").replace("_", "") == shortId:
+					quirks[q]["MatchesWeapons"].append(w)
+					quirks[q]["ammoPerTon"] = Weapons["weapons"][w]["WeaponStats"]["ammoPerTon"]
+					matchFound = True
+					break
+					#ammoQuirkName = "ammocapacity_" + shortId + "_additive"
+				#if (ammoQuirkName in quirks):
+					#quirks[ammoQuirkName]["MatchesWeapons"].append(w)
+					#quirks[ammoQuirkName]["ammoPerTon"] = Weapons["weapons"][w]["WeaponStats"]["ammoPerTon"]
+					
+			if(not matchFound):
+				print("no ammo quirk found for " + w + "("+shortId+"). Maybe someday?")
+
 
 	weaponquirklist = list(weaponquirkset)
 	weaponquirklist.sort()
