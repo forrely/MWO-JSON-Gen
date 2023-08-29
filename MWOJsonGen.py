@@ -1,4 +1,3 @@
-
 import os
 import shutil
 import zipfile
@@ -6,20 +5,12 @@ import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
-
 gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
 
 GameVersion = "unknown"
 Weapons = {}
 MechIDs = {}
 OmnipodIDs = {}
-
-
-class CommentedTreeBuilder(ET.TreeBuilder):
-    def comment(self, data):
-        self.start(ET.Comment, {})
-        self.data(data)
-        self.end(ET.Comment)
 
 def copy_mdf_and_xml_files(source_dir):
 	print("The source directory is:", source_dir)
@@ -67,21 +58,10 @@ def read_and_convert_weapons(weapon_path):
 	weapons = {
 		"_GameVersion": GameVersion,
 		"weapons": {}
-		} #defaultdict(dict)
+		} 
 	for wElement in root.iter("Weapon"):
-		inheritFrom = wElement.get("InheritFrom")
-		#t_ =  wElement.find("WeaponStats").get("type") if inheritId == None else 
-
+		inheritFrom = wElement.get("InheritFrom") 
 		weapons["weapons"][wElement.get("name")] = wElement.attrib	
-		# weapons["weapons"][wElement.get("name")] = {
-		# 	"id": wElement.get("id"),
-		# 	"HardpointAliases": wElement.get("HardpointAliases").split(","),
-		# 	#"type": wElement.find("WeaponStats").get("type") if inheritId is None else "",
-		# 	"inheritId": inheritId,
-		# 	"faction": wElement.get("faction"),
-		# 	"WeaponStats": wElement.find("WeaponStats").attrib,
-		# 	"Loc": wElement.find("Loc").attrib
-		# }
 		
 		weapons["weapons"][wElement.get("name")].update({
 			"HardpointAliases": wElement.get("HardpointAliases").split(","),
@@ -164,7 +144,6 @@ def read_mech_ids(mech_item_path):
 	file = open(mech_item_path, "r")
 	tree = ET.parse(file)
 	root = tree.getroot()
-	#data["mechs"][mech_name] = { "Variants": {}}
 
 	# iterate through variants
 	for v in root.iter("Mech"):
@@ -173,13 +152,8 @@ def read_mech_ids(mech_item_path):
 			"faction": v.get("faction"),
 			"chassis": v.get("chassis"),
 		}
-		#if v.get("name") in data["mechs"][v.get("chassis")]
 		data["chassis"][v.get("chassis")]["faction"] = v.get("faction")
 
-
-	#print("writing mech id json:\n")
-	#with open('Weapons.json', 'w') as f:
-	#	json.dump(weapons, f, indent=4, separators=(",", ": "), sort_keys=True)	
 	global MechIDs
 	MechIDs = data
 
@@ -204,7 +178,6 @@ def read_omnipod_ids(omnipod_item_path):
 
 	global OmnipodIDs
 	OmnipodIDs = data
-
 
 
 def read_and_convert_mech_and_quirks(mech_dir):
@@ -284,6 +257,7 @@ def read_and_convert_mech_and_quirks(mech_dir):
 									baseStats["class"] = className
 							
 							#print(baseStats)
+							mechCanEquipECM = False
 							components = {}
 							for c in root.iter("Component"):
 								cname = c.get("Name")
@@ -294,10 +268,15 @@ def read_and_convert_mech_and_quirks(mech_dir):
 
 								if mechvariant in OmnipodIDs["Variants"] and cname in OmnipodIDs["Variants"][mechvariant]:
 									components[cname]["OmnipodID"] = OmnipodIDs["Variants"][mechvariant][cname]
-								else:
-									components[cname]["OmnipodID"] = ""
+								#else:
+								#	components[cname]["OmnipodID"] = ""
+
+								canECM = c.get("CanEquipECM")
+								if (canECM != None):
+									components[cname]["CanEquipECM"] = canECM
+									if(canECM == "1"):
+										mechCanEquipECM = True
 								#also get internal and fixed items (and slots?)
-							#print(components)
 							quirks = {}
 							for q in root.iter('Quirk'):
 								if q.get("name").find("rear") == -1:
@@ -305,11 +284,11 @@ def read_and_convert_mech_and_quirks(mech_dir):
 									quirkSet.add(q.get("name"))
 
 							variant["Stats"] = baseStats
+							variant["Stats"]["ECMPartFound"] = mechCanEquipECM
 							variant["ComponentList"] = components
 							variant["QuirkList"] = quirks
 							if baseStats["Variant"] == "ADR-A":
 								print(variant)
-							#data["mechs"][mech_name]["Variants"][baseStats["Variant"].upper()] = variant
 							data["mechs"][mech_name]["Variants"][mechvariant] = variant #<- have to use file name cause pgi made spelling errors in xml
 		
 					for member in zip_ref.namelist():
@@ -323,11 +302,6 @@ def read_and_convert_mech_and_quirks(mech_dir):
 								setName = s.get("name")
 								data["mechs"][mech_name]["Variants"][setName.upper()]["isOmniMech"] = True
 								omniComponents[setName]["SetBonuses"] = defaultdict(dict)
-								#print("testing: ")
-								#print(data["mechs"][mech_name])
-								#print(setName.upper())
-								#for v in data["mechs"][mech_name]["variants"]:
-									#print(setName.upper() == v)
 
 								# *** Set Bonuses ***
 								data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"] = defaultdict(dict)
@@ -338,10 +312,10 @@ def read_and_convert_mech_and_quirks(mech_dir):
 										if q.get("name").find("rear") == -1:
 											quirks[q.get("name")] = float(q.get("value"))
 											quirkSet.add(q.get("name"))
-									#omniComponents[setName]["SetBonuses"][count] = quirks
 									data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"][count] = quirks
 
 								# *** Omnipod Component Bonuses ***
+								mechCanEquipECM = False
 								for component in s.iter("component"):
 									quirks = {}
 									hardpointIds = []
@@ -351,26 +325,28 @@ def read_and_convert_mech_and_quirks(mech_dir):
 									for h in component.iter("Hardpoint"):
 										hardpointIds.append(int(h.get("ID")))
 
+									canECM = component.get("CanEquipECM")
+									if (canECM != None):
+										data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["CanEquipECM"] = canECM
+										if(canECM == "1"):
+											mechCanEquipECM = True
+
 									data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["QuirkList"] = quirks
 									data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["HardpointIds"] = hardpointIds
-									
-								
-							#data["mechs"][mech_name]["OmniPods"] = omniComponents
+								data["mechs"][mech_name]["Variants"][setName.upper()]["Stats"]["ECMPartFound"] = mechCanEquipECM
+																	
 					for member in zip_ref.namelist():
 						if os.path.basename(member).find("hardpoints") >= 0:
 							openedFile = zip_ref.open(member)
 							tree = ET.parse(openedFile)
 							root = tree.getroot()
 
-
 							def get_weapon_type(testingNames):
-								
 								for t in HardpointTypeAliases:
 									if any(n in testingNames for n in HardpointTypeAliases[t]):
 										return t
 								print("error: hardpoint not found\n", testingNames, "\n-\n", HardpointTypeAliases)
 								return ""
-
 
 							# Generate hardpoint index (id's to number of each hardpoint type)
 							hardpointIndex = defaultdict(dict)
@@ -380,13 +356,11 @@ def read_and_convert_mech_and_quirks(mech_dir):
 									names = []
 									for a in w.iter("Attachment"):
 										names.append(a.get("search"))
-									attachmentType = get_weapon_type(names) #get_weapon_type(attachment.get("search") for attachment in w)
+									attachmentType = get_weapon_type(names)
 									if attachmentType in hardpointIndex[id]:
 										hardpointIndex[id][attachmentType] += 1
 									else:
 										hardpointIndex[id][attachmentType] = 1
-							#data["mechs"][mech_name]
-
 
 							# Assign hardpoint info to each mech component by matching with hardpoint id in index
 							for vname,variant in data["mechs"][mech_name]["Variants"].items():
@@ -404,21 +378,6 @@ def read_and_convert_mech_and_quirks(mech_dir):
 											else:
 												componentHardpoints[hptype] = hardpointIndex[hid][hptype]
 									component["Hardpoints"] = componentHardpoints
-
-							
-
-
-							# tree = ET.parse(openedFile)#, ET.XMLParser(target=CommentedTreeBuilder()))
-							# root = tree.getroot()
-
-							# hardpoints = defaultdict(dict)							
-							# for h in root.iter("Hardpoint"):
-							# 	continue
-								#hardpoints[int(h.get("id"))] = 
-
-
-
-
 	
 	#print(data)				
 	print("writing json:\n")
@@ -428,8 +387,6 @@ def read_and_convert_mech_and_quirks(mech_dir):
 
 	write_modded_json_csv(data, "mechs.moddedjson.txt")
 	
-
-
 	quirklist = list(quirkSet)
 	quirklist.sort()
 	weaponquirkset = set()
@@ -507,6 +464,7 @@ def read_and_convert_mech_and_quirks(mech_dir):
 	
 	write_modded_json_csv(quirkData, "quirks.moddedjson.txt")
 
+
 def readVersion(source_file):
 	print("reading version...", source_file)
 	file = open(source_file, "r")
@@ -516,6 +474,7 @@ def readVersion(source_file):
 	
 	global GameVersion
 	GameVersion = tree.find("BuildVersion").text
+
 
 if __name__ == "__main__":
 	#source_dir = os.getcwd()
