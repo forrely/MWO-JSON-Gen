@@ -242,8 +242,12 @@ def read_and_convert_mech_and_quirks(mech_dir):
 							#print(tree)
 							root = tree.getroot()
 							baseStats = root.find("Mech").attrib
-							baseStats["faction"] = MechIDs["variants"][mechvariant]["faction"]
-							baseStats["id"] = MechIDs["variants"][mechvariant]["id"]
+							if mechvariant in MechIDs["variants"]:
+								baseStats["faction"] = MechIDs["variants"][mechvariant]["faction"]
+								baseStats["id"] = MechIDs["variants"][mechvariant]["id"]
+							else:
+								baseStats["faction"] = "unknown"
+								baseStats["id"] = ""
 							baseStats["BaseTons"] = float(baseStats["BaseTons"])
 							baseStats["MaxEngineRating"] = int(baseStats["MaxEngineRating"])
 							baseStats["MaxJumpJets"] = int(baseStats["MaxJumpJets"])
