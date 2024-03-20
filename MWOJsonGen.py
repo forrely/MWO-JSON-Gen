@@ -5,7 +5,7 @@ import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
-gamePath = "F:\Program Files (x86)\SteamLibrary\steamapps\common\MechWarrior Online"
+gamePath = r"G:\Program Files (x86)\Steam\steamapps\common\MechWarrior Online"
 
 GameVersion = "unknown"
 Weapons = {}
@@ -88,7 +88,7 @@ def read_and_convert_weapons(weapon_path):
 	
 	global Weapons
 	Weapons = weapons
-	load_ammo_data_to_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Modules\Ammo.xml"))
+	load_ammo_data_to_weapons(os.path.join(gamePath, r"Game\GameData\Libs\Items\Modules\Ammo.xml"))
 
 	print("writing json:\n")
 	with open('Weapons.json', 'w') as f:
@@ -250,7 +250,7 @@ def read_and_convert_mech_and_quirks(mech_dir):
 								baseStats["id"] = ""
 							baseStats["BaseTons"] = float(baseStats["BaseTons"])
 							baseStats["MaxEngineRating"] = int(baseStats["MaxEngineRating"])
-							baseStats["MaxJumpJets"] = int(baseStats["MaxJumpJets"])
+							baseStats["MaxJumpJets"] = int(baseStats["MaxJumpJets"]) if "MaxJumpJets" in baseStats else 0
 							baseStats["MaxTons"] = float(baseStats["MaxTons"])
 							baseStats["MinEngineRating"] = int(baseStats["MinEngineRating"])
 							
@@ -304,40 +304,43 @@ def read_and_convert_mech_and_quirks(mech_dir):
 							omniComponents = defaultdict(dict)							
 							for s in root.iter("Set"):
 								setName = s.get("name")
-								data["mechs"][mech_name]["Variants"][setName.upper()]["isOmniMech"] = True
-								omniComponents[setName]["SetBonuses"] = defaultdict(dict)
+								if setName.upper() not in data["mechs"][mech_name]["Variants"]:
+									print("error: mech found in omnipods but not mdf files - " + setName)
+								else:
+									data["mechs"][mech_name]["Variants"][setName.upper()]["isOmniMech"] = True
+									omniComponents[setName]["SetBonuses"] = defaultdict(dict)
 
-								# *** Set Bonuses ***
-								data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"] = defaultdict(dict)
-								for setBonus in s.iter("Bonus"):
-									count = setBonus.get("PieceCount")
-									quirks = {}
-									for q in setBonus.iter('Quirk'):
-										if q.get("name").find("rear") == -1:
+									# *** Set Bonuses ***
+									data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"] = defaultdict(dict)
+									for setBonus in s.iter("Bonus"):
+										count = setBonus.get("PieceCount")
+										quirks = {}
+										for q in setBonus.iter('Quirk'):
+											if q.get("name").find("rear") == -1:
+												quirks[q.get("name")] = float(q.get("value"))
+												quirkSet.add(q.get("name"))
+										data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"][count] = quirks
+
+									# *** Omnipod Component Bonuses ***
+									mechCanEquipECM = False
+									for component in s.iter("component"):
+										quirks = {}
+										hardpointIds = []
+										for q in component.iter('Quirk'):
 											quirks[q.get("name")] = float(q.get("value"))
 											quirkSet.add(q.get("name"))
-									data["mechs"][mech_name]["Variants"][setName.upper()]["SetBonuses"][count] = quirks
+										for h in component.iter("Hardpoint"):
+											hardpointIds.append(int(h.get("ID")))
 
-								# *** Omnipod Component Bonuses ***
-								mechCanEquipECM = False
-								for component in s.iter("component"):
-									quirks = {}
-									hardpointIds = []
-									for q in component.iter('Quirk'):
-										quirks[q.get("name")] = float(q.get("value"))
-										quirkSet.add(q.get("name"))
-									for h in component.iter("Hardpoint"):
-										hardpointIds.append(int(h.get("ID")))
+										canECM = component.get("CanEquipECM")
+										if (canECM != None):
+											data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["CanEquipECM"] = canECM
+											if(canECM == "1"):
+												mechCanEquipECM = True
 
-									canECM = component.get("CanEquipECM")
-									if (canECM != None):
-										data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["CanEquipECM"] = canECM
-										if(canECM == "1"):
-											mechCanEquipECM = True
-
-									data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["QuirkList"] = quirks
-									data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["HardpointIds"] = hardpointIds
-								data["mechs"][mech_name]["Variants"][setName.upper()]["Stats"]["ECMPartFound"] = mechCanEquipECM
+										data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["QuirkList"] = quirks
+										data["mechs"][mech_name]["Variants"][setName.upper()]["ComponentList"][component.get("name")]["HardpointIds"] = hardpointIds
+									data["mechs"][mech_name]["Variants"][setName.upper()]["Stats"]["ECMPartFound"] = mechCanEquipECM
 																	
 					for member in zip_ref.namelist():
 						if os.path.basename(member).find("hardpoints") >= 0:
@@ -484,7 +487,7 @@ if __name__ == "__main__":
 	#source_dir = os.getcwd()
 	#copy_mdf_and_xml_files(source_dir)
 	readVersion(os.path.join(gamePath, "build_info.xml"))
-	read_and_convert_weapons(os.path.join(gamePath, "Game\GameData\Libs\Items\Weapons\Weapons.xml"))
-	read_mech_ids(os.path.join(gamePath, "Game\GameData\Libs\Items\Mechs\Mechs.xml"))
-	read_omnipod_ids(os.path.join(gamePath, "Game\GameData\Libs\Items\OmniPods.xml"))
-	read_and_convert_mech_and_quirks(os.path.join(gamePath, "Game\mechs")) #reads possible quirks from mech data
+	read_and_convert_weapons(os.path.join(gamePath, r"Game\GameData\Libs\Items\Weapons\Weapons.xml"))
+	read_mech_ids(os.path.join(gamePath, r"Game\GameData\Libs\Items\Mechs\Mechs.xml"))
+	read_omnipod_ids(os.path.join(gamePath, r"Game\GameData\Libs\Items\OmniPods.xml"))
+	read_and_convert_mech_and_quirks(os.path.join(gamePath, r"Game\mechs")) #reads possible quirks from mech data
