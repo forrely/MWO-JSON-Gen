@@ -12,6 +12,14 @@ Weapons = {}
 MechIDs = {}
 OmnipodIDs = {}
 
+
+# For reference:
+# Weapon data "Game\GameData\Libs\Items\Weapons\Weapons.xml"
+# Shots per ammo "Game\GameData\Libs\Items\Modules\Ammo.xml"
+# Mech data "Game\GameData\Libs\Items\Mechs\Mechs.xml"
+# Omnipods r"Game\GameData\Libs\Items\OmniPods.xml"
+# Mechs and their quirks "Game\mechs"
+
 def copy_mdf_and_xml_files(source_dir):
 	print("The source directory is:", source_dir)
 	for file in os.listdir(source_dir):
@@ -79,7 +87,7 @@ def read_and_convert_weapons(weapon_path):
 	
 	for w in weapons["weapons"].values():
 		if "ammoType" in w["WeaponStats"]:
-			w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = w["WeaponStats"]["ammoType"].lower().replace("acammo", "").replace("ammo", "").replace("clan", "c").replace("-","")
+			w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = w["WeaponStats"]["ammoType"].lower().replace("acammo", "").replace("ammo", "").replace("clan", "c").replace("-","").replace("silverbulletgauss", "silverbullet")
 			if "hyperassaultgauss" in w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"]:
 				w["WeaponStats"]["ammoQuirkShortIdNoUnderscore"] = "chag40"
 		else:
