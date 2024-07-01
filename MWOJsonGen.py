@@ -12,6 +12,13 @@ Weapons = {}
 MechIDs = {}
 OmnipodIDs = {}
 
+trialmechs = ["FS9-AT", "INC-1T", "JVN-10PT", "MLX-GT", 
+			  "BSW-P2T", "HBK-IIC-AT", "HMN-BT", "WVR-7DT", 
+			  "NTG-HT", "RFL-IIC-2T", "TDR-9ST", "WHM-7ST", 
+			  "DWF-BT", "FNR-6T", "MCII-2T", "STK-4NT"]
+
+nonplayerweapons = ["DropShipLargePulseLaser", "FakeMachineGun"]
+
 
 # For reference:
 # Weapon data "Game\GameData\Libs\Items\Weapons\Weapons.xml"
@@ -97,6 +104,11 @@ def read_and_convert_weapons(weapon_path):
 	global Weapons
 	Weapons = weapons
 	load_ammo_data_to_weapons(os.path.join(gamePath, r"Game\GameData\Libs\Items\Modules\Ammo.xml"))
+
+	for fake in nonplayerweapons:
+		if fake in weapons["weapons"]:
+			del weapons["weapons"][fake]
+			print ("removed non-player weapon: " + fake)
 
 	print("writing json:\n")
 	with open('Weapons.json', 'w') as f:
@@ -242,6 +254,9 @@ def read_and_convert_mech_and_quirks(mech_dir):
 					for member in zip_ref.namelist():
 						if member.endswith(".mdf"):
 							mechvariant = os.path.basename(member).split(".")[0].upper()
+							if mechvariant in trialmechs:
+								print(" - skipping trial variant: " + mechvariant)
+								continue
 							openedFile = zip_ref.open(member)
 
 
@@ -314,6 +329,8 @@ def read_and_convert_mech_and_quirks(mech_dir):
 								setName = s.get("name")
 								if setName.upper() not in data["mechs"][mech_name]["Variants"]:
 									print("error: mech found in omnipods but not mdf files - " + setName)
+								elif setName in trialmechs:
+									print(" - skipping trial variant omnipods: " + setName)
 								else:
 									data["mechs"][mech_name]["Variants"][setName.upper()]["isOmniMech"] = True
 									omniComponents[setName]["SetBonuses"] = defaultdict(dict)
@@ -394,7 +411,7 @@ def read_and_convert_mech_and_quirks(mech_dir):
 												componentHardpoints[hptype] = hardpointIndex[hid][hptype]
 									component["Hardpoints"] = componentHardpoints
 	
-	#print(data)				
+	#print(data)	
 	print("writing json:\n")
 	with open('Mechs.json', 'w') as f:
 		json.dump(data, f, indent=4, separators=(",", ": "), sort_keys=True)					
