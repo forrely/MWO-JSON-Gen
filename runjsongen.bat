@@ -1,0 +1,2 @@
+py MWOJsonGen.py
+pause
